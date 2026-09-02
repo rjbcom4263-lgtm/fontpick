@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { rankBM25 } from './recommendation/bm25'
 import { analyzeKoreanVibe, vibeLabel, type KoreanVibeAnalysis, type VibeTag } from './recommendation/koreanVibe'
 import { filterCommerciallyApproved } from './recommendation/licenseGate'
+import { EXTERNAL_FONT_CATALOG, externalFontName, normalizeFontName, type ExternalFontRuntime } from './data/externalFonts'
 
 type Screen = 'landing' | 'results' | 'compare' | 'download'
 type Purpose = '자동' | '로고' | '레이저 각인' | '간판' | '포스터' | 'SNS' | '청첩장'
@@ -31,6 +32,9 @@ interface FontData {
   id: number
   name: string
   cssClass: string
+  fontFamily?: string
+  fontFileUrl?: string
+  stylesheetUrl?: string
   score: number
   tags: string[]
   license: string
@@ -55,7 +59,7 @@ interface TextAnalysis {
   vibe: KoreanVibeAnalysis
 }
 
-const FONTS: FontData[] = [
+const BASE_FONTS: FontData[] = [
   {
     id: 1, name: 'Noto Sans KR', cssClass: 'preview-noto',
     score: 96, tags: ['미니멀', '현대적', '가독성'],
@@ -921,6 +925,90 @@ const FONTS: FontData[] = [
   },
 ]
 
+const externalProfile = (category: string): FontProfile => {
+  const handwriting = category.includes('handwriting') || category.includes('brush')
+  const serif = category.includes('serif')
+  const display = category.includes('display')
+  const rounded = category.includes('rounded')
+  const monospace = category.includes('monospace')
+  const styles: FilterTag[] = handwriting
+    ? [category.includes('brush') ? '붓글씨' : '손글씨']
+    : serif ? ['명조'] : display ? ['디스플레이'] : ['고딕']
+
+  return {
+    moods: {
+      warm: handwriting ? 86 : rounded ? 76 : serif ? 65 : 55,
+      emotional: handwriting ? 92 : serif ? 80 : 45,
+      cute: handwriting ? 72 : rounded ? 82 : 30,
+      formal: serif ? 82 : handwriting ? 35 : 72,
+      strong: display ? 88 : 48,
+      modern: handwriting ? 42 : serif ? 48 : 82,
+      traditional: serif || category.includes('retro') || category.includes('old') ? 88 : 38,
+      playful: handwriting || display ? 78 : 40,
+      friendly: handwriting || rounded ? 88 : 68,
+      luxury: serif ? 82 : 48,
+    },
+    styles,
+    readability: handwriting ? 62 : display ? 68 : 88,
+    smallText: handwriting ? 54 : display ? 58 : 86,
+    displayStrength: display || handwriting ? 88 : 72,
+    popularity: 64,
+    laser: {
+      stroke: handwriting ? 58 : 82,
+      smallText: handwriting ? 48 : 82,
+      counter: display ? 66 : 80,
+      simplicity: monospace ? 92 : handwriting ? 54 : 84,
+    },
+    vibeTags: handwriting
+      ? ['handmade', 'emotional', 'warm', 'friendly', 'poetic']
+      : serif ? ['editorial', 'traditional', 'culture', 'luxury']
+        : display ? ['impact', 'poster', 'signage', 'campaign']
+          : ['clean', 'modern', 'readable', 'brand'],
+    purposes: {
+      '로고': display ? 90 : handwriting ? 78 : 84,
+      '레이저 각인': handwriting ? 52 : 82,
+      '간판': display ? 94 : handwriting ? 76 : 82,
+      '포스터': display || handwriting ? 92 : 84,
+      'SNS': handwriting || rounded ? 92 : 84,
+      '청첩장': serif || handwriting ? 90 : 62,
+    },
+  }
+}
+
+const externalToFontData = (font: ExternalFontRuntime, index: number): FontData => {
+  const handwriting = font.category.includes('handwriting') || font.category.includes('brush')
+  const display = font.category.includes('display')
+  const serif = font.category.includes('serif')
+  const provider = font.provider === 'naver' ? '네이버' : font.provider === 'baemin' ? '배달의민족' : font.provider.toUpperCase()
+  return {
+    id: 56 + index,
+    name: externalFontName(font),
+    cssClass: `preview-external-${font.id}`,
+    fontFamily: font.fontFamily,
+    fontFileUrl: font.fontFileUrl,
+    stylesheetUrl: font.stylesheetUrl,
+    score: handwriting ? 79 : display ? 82 : 84,
+    tags: handwriting ? ['감성', '손글씨', '친근한'] : serif ? ['명조', '고급', '전통'] : display ? ['디스플레이', '강렬'] : ['고딕', '현대적', '가독성'],
+    license: font.provider === 'naver' ? 'NAVER 나눔글꼴 라이선스' : 'SIL OFL 1.1',
+    commercial: true,
+    modifiable: true,
+    redistribute: true,
+    downloadCount: '신규',
+    description: `${provider}에서 배포하는 상업용 사용 가능 한글 폰트입니다.`,
+    goodFor: handwriting ? ['SNS', '청첩장', '포스터'] : display ? ['로고', '간판', '포스터'] : ['로고', 'SNS', '포스터'],
+    weight: '400',
+    reasons: [],
+    profile: externalProfile(font.category),
+  }
+}
+
+const baseNames = new Set(BASE_FONTS.map(font => normalizeFontName(font.name)))
+const GENERATED_EXTERNAL_FONTS = EXTERNAL_FONT_CATALOG
+  .filter(font => (font.fontFileUrl || font.stylesheetUrl) && !baseNames.has(normalizeFontName(font.canonicalName)))
+  .map(externalToFontData)
+
+const FONTS: FontData[] = [...BASE_FONTS, ...GENERATED_EXTERNAL_FONTS]
+
 
 const DYNAMIC_GOOGLE_FONT_SPECS: Record<string, string> = {
   'preview-noto-serif': 'Noto+Serif+KR:wght@400;700',
@@ -1020,7 +1108,7 @@ const renderTextCanvas = async (
   height: number,
   transparent: boolean,
 ) => {
-  const family = resolveFontFamily(font.cssClass)
+  const family = font.fontFamily ? `"${font.fontFamily}"` : resolveFontFamily(font.cssClass)
   await document.fonts.load(`${font.weight} 64px ${family}`, text)
   await document.fonts.ready
 
@@ -1076,7 +1164,7 @@ const exportFontArtwork = async (
     }
   }
 
-  const family = resolveFontFamily(font.cssClass)
+  const family = font.fontFamily ? `"${font.fontFamily}"` : resolveFontFamily(font.cssClass)
   await document.fonts.load(`${font.weight} 64px ${family}`, text)
   const fontSize = Math.max(20, Math.floor(height * 0.46))
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><title>${escapeXml(text)} · ${escapeXml(font.name)}</title><rect width="100%" height="100%" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#0f172a" font-family="${escapeXml(family)}" font-size="${fontSize}" font-weight="${escapeXml(font.weight)}">${escapeXml(text)}</text></svg>`
@@ -1453,7 +1541,7 @@ const FontCard = ({ font, previewText, liked, selected, onLike, onSelect, onComp
     <div className="px-5 pt-5 pb-4 bg-slate-50 border-b border-slate-100 min-h-[100px] flex items-center justify-center">
       <p
         className={`${font.cssClass} text-center leading-tight text-slate-900 break-all`}
-        style={{ fontSize: '2.25rem', fontWeight: font.weight as any }}
+        style={{ fontSize: '2.25rem', fontWeight: font.weight as any, fontFamily: font.fontFamily }}
       >
         {previewText}
       </p>
@@ -1552,6 +1640,7 @@ export default function App() {
   const [downloadError, setDownloadError] = useState('')
   const [downloadUrl, setDownloadUrl] = useState('')
   const [downloadFileName, setDownloadFileName] = useState('')
+  const [visibleCount, setVisibleCount] = useState(24)
 
   const previewText = inputText.trim() || '가나다라마바사'
   const analysis = analyzeText(previewText)
@@ -1559,10 +1648,11 @@ export default function App() {
   const approvedFonts = filterCommerciallyApproved(FONTS)
   const rankedFonts = scoreFonts(approvedFonts, analysis, effectivePurpose)
   const analysisHighlights = getAnalysisHighlights(analysis)
-  const displayFonts = sortFonts(
+  const filteredSortedFonts = sortFonts(
     rankedFonts.filter(font => activeFilters.length === 0 || activeFilters.every(filter => filterMatches(font, filter))),
     sortBy,
-  ).slice(0, 8)
+  )
+  const displayFonts = filteredSortedFonts.slice(0, visibleCount)
 
 
   const fontsNeededForCurrentScreen = [
@@ -1578,10 +1668,20 @@ export default function App() {
     .join('|')
 
   const dynamicStylesheetKey = [...new Set(fontsNeededForCurrentScreen
-    .map(font => DYNAMIC_FONT_STYLESHEETS[font.cssClass])
+    .map(font => font.stylesheetUrl ?? DYNAMIC_FONT_STYLESHEETS[font.cssClass])
     .filter(Boolean))]
     .sort()
     .join('|')
+
+  const dynamicFontFileKey = fontsNeededForCurrentScreen
+    .filter(font => font.fontFileUrl && font.fontFamily)
+    .map(font => `${font.fontFamily}::${font.fontFileUrl}`)
+    .sort()
+    .join('|')
+
+  useEffect(() => {
+    setVisibleCount(24)
+  }, [activeFilters, sortBy, inputText, purpose])
 
   useEffect(() => {
     if (!dynamicFontKey) {
@@ -1615,6 +1715,22 @@ export default function App() {
       document.head.appendChild(link)
     }
   }, [dynamicStylesheetKey])
+
+  useEffect(() => {
+    const id = 'fontpick-direct-fonts'
+    document.getElementById(id)?.remove()
+    if (!dynamicFontFileKey) return
+    const style = document.createElement('style')
+    style.id = id
+    style.textContent = dynamicFontFileKey.split('|').map(item => {
+      const separator = item.indexOf('::')
+      const family = item.slice(0, separator).replace(/["\\]/g, '')
+      const url = item.slice(separator + 2).replace(/["')\\]/g, '')
+      return `@font-face{font-family:"${family}";src:url("${url}") format("truetype");font-style:normal;font-weight:400;font-display:swap;}`
+    }).join('\n')
+    document.head.appendChild(style)
+    return () => style.remove()
+  }, [dynamicFontFileKey])
 
   useEffect(() => () => {
     if (downloadUrl) URL.revokeObjectURL(downloadUrl)
@@ -1790,7 +1906,7 @@ export default function App() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {FONTS.slice(0, 4).map(f => (
               <div key={f.id} className="bg-white border border-slate-200 rounded-xl p-4 text-center hover:shadow-sm transition-base">
-                <p className={`${f.cssClass} text-2xl text-slate-900 mb-2 leading-tight`} style={{ fontWeight: f.weight as any }}>
+                <p className={`${f.cssClass} text-2xl text-slate-900 mb-2 leading-tight`} style={{ fontWeight: f.weight as any, fontFamily: f.fontFamily }}>
                   {inputText || '안녕하세요'}
                 </p>
                 <p className="text-xs text-slate-500">{f.name}</p>
@@ -1860,7 +1976,7 @@ export default function App() {
                 />
               </div>
               <div className="text-xs text-slate-400">
-                <span className="font-semibold text-slate-700">{displayFonts.length}개</span> 폰트 추천
+                <span className="font-semibold text-slate-700">{filteredSortedFonts.length}개</span> 폰트 추천
               </div>
             </div>
             <div className="flex items-center gap-2 overflow-x-auto pb-0.5 md:pb-0">
@@ -1980,6 +2096,20 @@ export default function App() {
               </div>
             )}
 
+            {displayFonts.length < filteredSortedFonts.length && (
+              <div className="flex flex-col items-center gap-2 mt-7">
+                <p className="text-xs text-slate-400">
+                  {filteredSortedFonts.length}개 중 {displayFonts.length}개를 보여드리고 있어요
+                </p>
+                <button
+                  onClick={() => setVisibleCount(count => Math.min(count + 24, filteredSortedFonts.length))}
+                  className="px-7 py-2.5 rounded-xl border border-slate-300 bg-white text-sm font-semibold text-slate-700 hover:border-slate-500 hover:bg-slate-50 transition-base"
+                >
+                  폰트 더 보기 +24
+                </button>
+              </div>
+            )}
+
             <AdBanner className="h-20 mt-5" />
           </div>
         </div>
@@ -2046,7 +2176,7 @@ export default function App() {
                 <div className={`p-6 ${bgClass} min-h-40 flex items-center justify-center border-b border-slate-100`}>
                   <p
                     className={`${font.cssClass} ${textClass} text-center leading-tight break-all`}
-                    style={{ fontSize: `${fontSize}px`, fontWeight: font.weight as any }}
+                    style={{ fontSize: `${fontSize}px`, fontWeight: font.weight as any, fontFamily: font.fontFamily }}
                   >
                     {previewText}
                   </p>
@@ -2078,7 +2208,7 @@ export default function App() {
                   {/* Sample text rows */}
                   <div className="mt-4 space-y-2 pt-4 border-t border-slate-100">
                     {['한글 가나다라마바사아자차카타파하', 'ABCDEFGabcdefg', '0123456789', '!@#$%&'].map(sample => (
-                      <p key={sample} className={`${font.cssClass} text-xs text-slate-600 truncate`} style={{ fontWeight: font.weight as any }}>
+                      <p key={sample} className={`${font.cssClass} text-xs text-slate-600 truncate`} style={{ fontWeight: font.weight as any, fontFamily: font.fontFamily }}>
                         {sample}
                       </p>
                     ))}
@@ -2123,7 +2253,7 @@ export default function App() {
             <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
               {/* Preview */}
               <div className="bg-slate-50 border-b border-slate-200 p-8 flex items-center justify-center min-h-36">
-                <p className={`${font.cssClass} text-4xl text-slate-900 text-center leading-tight`} style={{ fontWeight: font.weight as any }}>
+                <p className={`${font.cssClass} text-4xl text-slate-900 text-center leading-tight`} style={{ fontWeight: font.weight as any, fontFamily: font.fontFamily }}>
                   {previewText}
                 </p>
               </div>

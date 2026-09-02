@@ -7,9 +7,9 @@ import {
   isLicenseRecordApproved,
 } from './licenseGate.ts'
 
-test('all 55 production fonts are APPROVED for commercial web/output use', () => {
+test('all registered production fonts are APPROVED for commercial web/output use', () => {
   const names = Object.keys(COMMERCIAL_LICENSES)
-  assert.equal(names.length, 55)
+  assert.equal(names.length >= 182, true)
   for (const name of names) {
     assert.equal(isCommerciallyApproved(name), true, `${name} should be approved`)
     assert.equal(COMMERCIAL_LICENSES[name].status, 'APPROVED')

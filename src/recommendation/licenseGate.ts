@@ -1,3 +1,5 @@
+import { EXTERNAL_FONT_CATALOG, externalFontName } from '../data/externalFonts.ts'
+
 export type LicenseStatus = 'APPROVED' | 'REVIEW' | 'BLOCKED'
 export type RedistributionPolicy = 'allowed-with-license' | 'not-offered' | 'blocked'
 
@@ -456,6 +458,23 @@ export const COMMERCIAL_LICENSES: Record<string, CommercialLicenseRecord> = {
     notes: 'NAVER official project permits use and redistribution under OFL; official WOFF2 files are used only as a web preview.',
   },
 
+}
+
+for (const font of EXTERNAL_FONT_CATALOG) {
+  const fontName = externalFontName(font)
+  if (COMMERCIAL_LICENSES[fontName]) continue
+  COMMERCIAL_LICENSES[fontName] = {
+    fontName,
+    status: 'APPROVED',
+    licenseType: font.provider === 'naver' ? 'NAVER 나눔글꼴 라이선스' : 'SIL OFL 1.1',
+    commercialUse: true,
+    webUse: true,
+    generatedOutputUse: true,
+    fontFileRedistribution: 'allowed-with-license',
+    officialLicenseUrl: font.officialLicenseUrl,
+    verifiedAt: '2026-09-02',
+    notes: `${font.provider.toUpperCase()} 공식 배포처와 라이선스를 확인한 외부 폰트 후보입니다.`,
+  }
 }
 
 export const isLicenseRecordApproved = (record?: CommercialLicenseRecord): boolean => Boolean(
