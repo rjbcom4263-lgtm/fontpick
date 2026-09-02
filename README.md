@@ -29,3 +29,11 @@ Google Fonts 47개 기준선과 외부 후보 데이터는 `FONT_COLLECTION_55.m
 ## 참고
 - 신규 폰트 미리보기는 Google Fonts에서 동적으로 불러오므로 인터넷 연결이 필요합니다.
 - Node.js LTS 버전 설치가 필요합니다.
+
+## Firebase Hosting 배포
+
+```bash
+npm run deploy
+```
+
+기본 Firebase 프로젝트는 `fontpick-saegim`, 배포 대상 폴더는 `dist`입니다.
