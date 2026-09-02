@@ -77,6 +77,13 @@ body {
 .preview-gugi { font-family: "Gugi", sans-serif; }
 .preview-batang { font-family: "Batang", serif; }
 .preview-dotum { font-family: "Dotum", sans-serif; }
+.preview-gulim { font-family: "Gulim", sans-serif; }
+.preview-gulimche { font-family: "GulimChe", monospace; }
+.preview-dotumche { font-family: "DotumChe", monospace; }
+.preview-batangche { font-family: "BatangChe", serif; }
+.preview-gungsuh { font-family: "Gungsuh", cursive; }
+.preview-gungsuhche { font-family: "GungsuhChe", cursive; }
+.preview-42dot-sans { font-family: "42dot Sans", sans-serif; }
 .preview-asta-sans { font-family: "Asta Sans", sans-serif; }
 .preview-moirai-one { font-family: "Moirai One", sans-serif; }
 .preview-pretendard { font-family: "Pretendard", sans-serif; }
@@ -91,6 +98,46 @@ body {
 @font-face {
   font-family: "Batang";
   src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/batang/Batang-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GulimChe";
+  src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/gulimche/GulimChe-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DotumChe";
+  src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/dotumche/DotumChe-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BatangChe";
+  src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/batangche/BatangChe-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gungsuh";
+  src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/gungsuh/Gungsuh-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GungsuhChe";
+  src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/gungsuhche/GungsuhChe-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

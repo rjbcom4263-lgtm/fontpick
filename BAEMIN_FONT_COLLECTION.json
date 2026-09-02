@@ -1,0 +1,81 @@
+{
+  "provider": "Woowa Brothers / Baemin",
+  "verifiedAt": "2026-09-02",
+  "officialCatalog": "https://www.woowahan.com/fonts",
+  "officialLicense": "https://www.woowahan.com/fonts/license",
+  "currentDownloadableFontFamilies": [
+    {
+      "canonicalName": "BM Kkubulim",
+      "displayName": "꾸불림",
+      "category": "display",
+      "duplicateOfGoogleFonts": null
+    },
+    {
+      "canonicalName": "BM Hanna Pro",
+      "displayName": "한나 Pro",
+      "category": "display",
+      "duplicateOfGoogleFonts": null
+    },
+    {
+      "canonicalName": "BM Hanna Air",
+      "displayName": "한나 Air",
+      "category": "sans",
+      "duplicateOfGoogleFonts": null
+    },
+    {
+      "canonicalName": "BM Hanna 11yrs",
+      "displayName": "한나는열한살",
+      "category": "display",
+      "duplicateOfGoogleFonts": null
+    },
+    {
+      "canonicalName": "BM Euljiro OraeOrae",
+      "displayName": "을지로 오래오래",
+      "category": "display-retro",
+      "duplicateOfGoogleFonts": null
+    },
+    {
+      "canonicalName": "BM Euljiro 10 Years Later",
+      "displayName": "을지로 10년 후",
+      "category": "display-retro",
+      "duplicateOfGoogleFonts": null
+    },
+    {
+      "canonicalName": "BM Euljiro",
+      "displayName": "을지로",
+      "category": "brush-display",
+      "duplicateOfGoogleFonts": null
+    },
+    {
+      "canonicalName": "Kirang Haerang",
+      "displayName": "기랑해랑",
+      "category": "display",
+      "duplicateOfGoogleFonts": "Kirang Haerang"
+    },
+    {
+      "canonicalName": "Yeon Sung",
+      "displayName": "연성",
+      "category": "handwriting",
+      "duplicateOfGoogleFonts": "Yeon Sung"
+    },
+    {
+      "canonicalName": "Do Hyeon",
+      "displayName": "도현",
+      "category": "display",
+      "duplicateOfGoogleFonts": "Do Hyeon"
+    },
+    {
+      "canonicalName": "Jua",
+      "displayName": "주아",
+      "category": "display",
+      "duplicateOfGoogleFonts": "Jua"
+    }
+  ],
+  "fontFamilyCount": 11,
+  "excludedAssets": [
+    {
+      "name": "Baemin Geullim",
+      "reason": "Current official site distributes it as PNG illustrated lettering, not a TTF/OTF font family."
+    }
+  ]
+}

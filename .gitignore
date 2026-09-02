@@ -16,3 +16,7 @@ pnpm-debug.log*
 Thumbs.db
 .idea/
 .vscode/
+.venv-font-collector/
+font-collector-output/
+__pycache__/
+*.pyc
