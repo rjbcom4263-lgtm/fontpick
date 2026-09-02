@@ -1,0 +1,1804 @@
+{
+  "summary": {
+    "fontCount": 38,
+    "approvedCount": 38,
+    "testCount": 42,
+    "failures": [],
+    "uniqueTop1": 17,
+    "uniqueTop8": 35,
+    "top1Frequency": [
+      [
+        "Noto Sans KR",
+        5
+      ],
+      [
+        "Orbit",
+        5
+      ],
+      [
+        "Jua",
+        4
+      ],
+      [
+        "Gowun Batang",
+        4
+      ],
+      [
+        "Do Hyeon",
+        3
+      ],
+      [
+        "Dongle",
+        3
+      ],
+      [
+        "IBM Plex Sans KR",
+        3
+      ],
+      [
+        "Nanum Gothic Coding",
+        2
+      ],
+      [
+        "Sunflower",
+        2
+      ],
+      [
+        "Dokdo",
+        2
+      ],
+      [
+        "Hahmlet",
+        2
+      ],
+      [
+        "Bagel Fat One",
+        2
+      ],
+      [
+        "Black Han Sans",
+        1
+      ],
+      [
+        "East Sea Dokdo",
+        1
+      ],
+      [
+        "Noto Serif KR",
+        1
+      ],
+      [
+        "Grandiflora One",
+        1
+      ],
+      [
+        "나눔고딕",
+        1
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "purpose": "레이저 각인",
+      "text": "홍길동",
+      "detected": "포스터",
+      "top1": "Do Hyeon",
+      "top1Score": 93,
+      "top8": [
+        {
+          "font": "Do Hyeon",
+          "score": 93
+        },
+        {
+          "font": "Orbit",
+          "score": 93
+        },
+        {
+          "font": "Gothic A1",
+          "score": 93
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 92
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 92
+        },
+        {
+          "font": "Dotum",
+          "score": 92
+        },
+        {
+          "font": "Sunflower",
+          "score": 89
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 89
+        }
+      ]
+    },
+    {
+      "purpose": "레이저 각인",
+      "text": "다대포에서 만나요",
+      "detected": "포스터",
+      "top1": "Do Hyeon",
+      "top1Score": 92,
+      "top8": [
+        {
+          "font": "Do Hyeon",
+          "score": 92
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 91
+        },
+        {
+          "font": "Gothic A1",
+          "score": 91
+        },
+        {
+          "font": "Dotum",
+          "score": 91
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 90
+        },
+        {
+          "font": "Orbit",
+          "score": 90
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 89
+        },
+        {
+          "font": "Sunflower",
+          "score": 88
+        }
+      ]
+    },
+    {
+      "purpose": "레이저 각인",
+      "text": "오늘 당신과 함께한 이 순간을 오래도록 기억합니다",
+      "detected": "청첩장",
+      "top1": "Noto Sans KR",
+      "top1Score": 91,
+      "top8": [
+        {
+          "font": "Noto Sans KR",
+          "score": 91
+        },
+        {
+          "font": "Gothic A1",
+          "score": 91
+        },
+        {
+          "font": "Dotum",
+          "score": 91
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 90
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 90
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 89
+        },
+        {
+          "font": "Orbit",
+          "score": 89
+        },
+        {
+          "font": "나눔고딕",
+          "score": 88
+        }
+      ]
+    },
+    {
+      "purpose": "레이저 각인",
+      "text": "SAEGIM 2026",
+      "detected": "포스터",
+      "top1": "Nanum Gothic Coding",
+      "top1Score": 97,
+      "top8": [
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 97
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 93
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Orbit",
+          "score": 93
+        },
+        {
+          "font": "Gothic A1",
+          "score": 93
+        },
+        {
+          "font": "Dotum",
+          "score": 92
+        },
+        {
+          "font": "Sunflower",
+          "score": 89
+        }
+      ]
+    },
+    {
+      "purpose": "레이저 각인",
+      "text": "051-123-4567",
+      "detected": "포스터",
+      "top1": "Nanum Gothic Coding",
+      "top1Score": 97,
+      "top8": [
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 97
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 93
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Orbit",
+          "score": 93
+        },
+        {
+          "font": "Gothic A1",
+          "score": 93
+        },
+        {
+          "font": "Dotum",
+          "score": 92
+        },
+        {
+          "font": "Sunflower",
+          "score": 89
+        }
+      ]
+    },
+    {
+      "purpose": "레이저 각인",
+      "text": "잠시 주차중입니다",
+      "detected": "포스터",
+      "top1": "Noto Sans KR",
+      "top1Score": 93,
+      "top8": [
+        {
+          "font": "Noto Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 93
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Orbit",
+          "score": 93
+        },
+        {
+          "font": "Gothic A1",
+          "score": 93
+        },
+        {
+          "font": "Dotum",
+          "score": 92
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 91
+        },
+        {
+          "font": "Sunflower",
+          "score": 89
+        }
+      ]
+    },
+    {
+      "purpose": "레이저 각인",
+      "text": "감천문화마을",
+      "detected": "간판",
+      "top1": "Do Hyeon",
+      "top1Score": 91,
+      "top8": [
+        {
+          "font": "Do Hyeon",
+          "score": 91
+        },
+        {
+          "font": "Dotum",
+          "score": 90
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 88
+        },
+        {
+          "font": "Gothic A1",
+          "score": 88
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 87
+        },
+        {
+          "font": "Orbit",
+          "score": 87
+        },
+        {
+          "font": "Sunflower",
+          "score": 86
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 84
+        }
+      ]
+    },
+    {
+      "purpose": "포스터",
+      "text": "SALE 50%",
+      "detected": "포스터",
+      "top1": "Black Han Sans",
+      "top1Score": 96,
+      "top8": [
+        {
+          "font": "Black Han Sans",
+          "score": 96
+        },
+        {
+          "font": "Gasoek One",
+          "score": 94
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 92
+        },
+        {
+          "font": "Gugi",
+          "score": 92
+        },
+        {
+          "font": "Dokdo",
+          "score": 88
+        },
+        {
+          "font": "Sunflower",
+          "score": 87
+        },
+        {
+          "font": "East Sea Dokdo",
+          "score": 87
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 86
+        }
+      ]
+    },
+    {
+      "purpose": "포스터",
+      "text": "다대포 맥주축제",
+      "detected": "포스터",
+      "top1": "Dongle",
+      "top1Score": 89,
+      "top8": [
+        {
+          "font": "Dongle",
+          "score": 89
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 89
+        },
+        {
+          "font": "Kirang Haerang",
+          "score": 87
+        },
+        {
+          "font": "Gugi",
+          "score": 86
+        },
+        {
+          "font": "Dokdo",
+          "score": 84
+        },
+        {
+          "font": "Jua",
+          "score": 82
+        },
+        {
+          "font": "East Sea Dokdo",
+          "score": 81
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 78
+        }
+      ]
+    },
+    {
+      "purpose": "포스터",
+      "text": "감천 예술제",
+      "detected": "포스터",
+      "top1": "East Sea Dokdo",
+      "top1Score": 93,
+      "top8": [
+        {
+          "font": "East Sea Dokdo",
+          "score": 93
+        },
+        {
+          "font": "Song Myung",
+          "score": 88
+        },
+        {
+          "font": "Yeon Sung",
+          "score": 88
+        },
+        {
+          "font": "Dokdo",
+          "score": 88
+        },
+        {
+          "font": "나눔명조",
+          "score": 85
+        },
+        {
+          "font": "Grandiflora One",
+          "score": 84
+        },
+        {
+          "font": "Batang",
+          "score": 84
+        },
+        {
+          "font": "Hahmlet",
+          "score": 82
+        }
+      ]
+    },
+    {
+      "purpose": "포스터",
+      "text": "여름밤 콘서트",
+      "detected": "포스터",
+      "top1": "Sunflower",
+      "top1Score": 90,
+      "top8": [
+        {
+          "font": "Sunflower",
+          "score": 90
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 89
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 88
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 88
+        },
+        {
+          "font": "Orbit",
+          "score": 88
+        },
+        {
+          "font": "Gothic A1",
+          "score": 87
+        },
+        {
+          "font": "나눔고딕",
+          "score": 84
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 83
+        }
+      ]
+    },
+    {
+      "purpose": "포스터",
+      "text": "어린이 축제",
+      "detected": "포스터",
+      "top1": "Jua",
+      "top1Score": 88,
+      "top8": [
+        {
+          "font": "Jua",
+          "score": 88
+        },
+        {
+          "font": "Dongle",
+          "score": 88
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 87
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 86
+        },
+        {
+          "font": "Gugi",
+          "score": 86
+        },
+        {
+          "font": "Gasoek One",
+          "score": 85
+        },
+        {
+          "font": "Gaegu",
+          "score": 83
+        },
+        {
+          "font": "Kirang Haerang",
+          "score": 83
+        }
+      ]
+    },
+    {
+      "purpose": "포스터",
+      "text": "레트로 골목시장",
+      "detected": "간판",
+      "top1": "Dokdo",
+      "top1Score": 87,
+      "top8": [
+        {
+          "font": "Dokdo",
+          "score": 87
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 78
+        },
+        {
+          "font": "East Sea Dokdo",
+          "score": 72
+        },
+        {
+          "font": "Gugi",
+          "score": 72
+        },
+        {
+          "font": "Dongle",
+          "score": 71
+        },
+        {
+          "font": "Yeon Sung",
+          "score": 70
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 66
+        },
+        {
+          "font": "Gasoek One",
+          "score": 63
+        }
+      ]
+    },
+    {
+      "purpose": "포스터",
+      "text": "AI HACKATHON",
+      "detected": "로고",
+      "top1": "Orbit",
+      "top1Score": 88,
+      "top8": [
+        {
+          "font": "Orbit",
+          "score": 88
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 87
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 83
+        },
+        {
+          "font": "Sunflower",
+          "score": 78
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 77
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 77
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 76
+        },
+        {
+          "font": "Gothic A1",
+          "score": 75
+        }
+      ]
+    },
+    {
+      "purpose": "청첩장",
+      "text": "우리 결혼합니다",
+      "detected": "청첩장",
+      "top1": "Gowun Batang",
+      "top1Score": 90,
+      "top8": [
+        {
+          "font": "Gowun Batang",
+          "score": 90
+        },
+        {
+          "font": "나눔명조",
+          "score": 87
+        },
+        {
+          "font": "Noto Serif KR",
+          "score": 87
+        },
+        {
+          "font": "Diphylleia",
+          "score": 86
+        },
+        {
+          "font": "Grandiflora One",
+          "score": 85
+        },
+        {
+          "font": "Hahmlet",
+          "score": 84
+        },
+        {
+          "font": "Song Myung",
+          "score": 84
+        },
+        {
+          "font": "나눔펜스크립트",
+          "score": 81
+        }
+      ]
+    },
+    {
+      "purpose": "청첩장",
+      "text": "오래도록 함께",
+      "detected": "SNS",
+      "top1": "Gowun Batang",
+      "top1Score": 92,
+      "top8": [
+        {
+          "font": "Gowun Batang",
+          "score": 92
+        },
+        {
+          "font": "나눔펜스크립트",
+          "score": 89
+        },
+        {
+          "font": "Diphylleia",
+          "score": 89
+        },
+        {
+          "font": "Nanum Brush Script",
+          "score": 87
+        },
+        {
+          "font": "Grandiflora One",
+          "score": 86
+        },
+        {
+          "font": "나눔명조",
+          "score": 85
+        },
+        {
+          "font": "Noto Serif KR",
+          "score": 85
+        },
+        {
+          "font": "Song Myung",
+          "score": 83
+        }
+      ]
+    },
+    {
+      "purpose": "청첩장",
+      "text": "SAVE THE DATE 2027",
+      "detected": "청첩장",
+      "top1": "Noto Sans KR",
+      "top1Score": 83,
+      "top8": [
+        {
+          "font": "Noto Sans KR",
+          "score": 83
+        },
+        {
+          "font": "Noto Serif KR",
+          "score": 83
+        },
+        {
+          "font": "Gowun Dodum",
+          "score": 83
+        },
+        {
+          "font": "나눔고딕",
+          "score": 82
+        },
+        {
+          "font": "Hahmlet",
+          "score": 81
+        },
+        {
+          "font": "나눔명조",
+          "score": 73
+        },
+        {
+          "font": "Gowun Batang",
+          "score": 72
+        },
+        {
+          "font": "Jua",
+          "score": 71
+        }
+      ]
+    },
+    {
+      "purpose": "청첩장",
+      "text": "두 사람의 시작",
+      "detected": "포스터",
+      "top1": "Hahmlet",
+      "top1Score": 85,
+      "top8": [
+        {
+          "font": "Hahmlet",
+          "score": 85
+        },
+        {
+          "font": "Noto Serif KR",
+          "score": 83
+        },
+        {
+          "font": "Gowun Dodum",
+          "score": 82
+        },
+        {
+          "font": "Grandiflora One",
+          "score": 80
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 79
+        },
+        {
+          "font": "나눔고딕",
+          "score": 79
+        },
+        {
+          "font": "나눔명조",
+          "score": 79
+        },
+        {
+          "font": "Gowun Batang",
+          "score": 79
+        }
+      ]
+    },
+    {
+      "purpose": "청첩장",
+      "text": "오늘부터 평생",
+      "detected": "포스터",
+      "top1": "Hahmlet",
+      "top1Score": 85,
+      "top8": [
+        {
+          "font": "Hahmlet",
+          "score": 85
+        },
+        {
+          "font": "Noto Serif KR",
+          "score": 83
+        },
+        {
+          "font": "Gowun Dodum",
+          "score": 82
+        },
+        {
+          "font": "Grandiflora One",
+          "score": 80
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 79
+        },
+        {
+          "font": "나눔고딕",
+          "score": 79
+        },
+        {
+          "font": "나눔명조",
+          "score": 79
+        },
+        {
+          "font": "Gowun Batang",
+          "score": 79
+        }
+      ]
+    },
+    {
+      "purpose": "청첩장",
+      "text": "소중한 분을 초대합니다",
+      "detected": "청첩장",
+      "top1": "Noto Serif KR",
+      "top1Score": 91,
+      "top8": [
+        {
+          "font": "Noto Serif KR",
+          "score": 91
+        },
+        {
+          "font": "나눔명조",
+          "score": 90
+        },
+        {
+          "font": "Gowun Batang",
+          "score": 90
+        },
+        {
+          "font": "Hahmlet",
+          "score": 86
+        },
+        {
+          "font": "Song Myung",
+          "score": 86
+        },
+        {
+          "font": "Diphylleia",
+          "score": 86
+        },
+        {
+          "font": "Grandiflora One",
+          "score": 85
+        },
+        {
+          "font": "Batang",
+          "score": 85
+        }
+      ]
+    },
+    {
+      "purpose": "청첩장",
+      "text": "사랑을 약속합니다",
+      "detected": "SNS",
+      "top1": "Gowun Batang",
+      "top1Score": 91,
+      "top8": [
+        {
+          "font": "Gowun Batang",
+          "score": 91
+        },
+        {
+          "font": "나눔펜스크립트",
+          "score": 87
+        },
+        {
+          "font": "Diphylleia",
+          "score": 87
+        },
+        {
+          "font": "Noto Serif KR",
+          "score": 86
+        },
+        {
+          "font": "Nanum Brush Script",
+          "score": 86
+        },
+        {
+          "font": "나눔명조",
+          "score": 85
+        },
+        {
+          "font": "Grandiflora One",
+          "score": 84
+        },
+        {
+          "font": "Song Myung",
+          "score": 83
+        }
+      ]
+    },
+    {
+      "purpose": "로고",
+      "text": "SAEGIM studio",
+      "detected": "로고",
+      "top1": "IBM Plex Sans KR",
+      "top1Score": 93,
+      "top8": [
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Orbit",
+          "score": 93
+        },
+        {
+          "font": "Gothic A1",
+          "score": 91
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 90
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 89
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 88
+        },
+        {
+          "font": "Gasoek One",
+          "score": 88
+        },
+        {
+          "font": "Sunflower",
+          "score": 86
+        }
+      ]
+    },
+    {
+      "purpose": "로고",
+      "text": "AI DESIGN LAB",
+      "detected": "로고",
+      "top1": "Orbit",
+      "top1Score": 94,
+      "top8": [
+        {
+          "font": "Orbit",
+          "score": 94
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 88
+        },
+        {
+          "font": "Gothic A1",
+          "score": 80
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 79
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 78
+        },
+        {
+          "font": "Sunflower",
+          "score": 77
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 74
+        }
+      ]
+    },
+    {
+      "purpose": "로고",
+      "text": "GAMCHEON",
+      "detected": "로고",
+      "top1": "Orbit",
+      "top1Score": 94,
+      "top8": [
+        {
+          "font": "Orbit",
+          "score": 94
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Gothic A1",
+          "score": 91
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 89
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 88
+        },
+        {
+          "font": "Sunflower",
+          "score": 87
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 87
+        },
+        {
+          "font": "나눔고딕",
+          "score": 82
+        }
+      ]
+    },
+    {
+      "purpose": "로고",
+      "text": "무지개공방",
+      "detected": "간판",
+      "top1": "Grandiflora One",
+      "top1Score": 85,
+      "top8": [
+        {
+          "font": "Grandiflora One",
+          "score": 85
+        },
+        {
+          "font": "나눔명조",
+          "score": 81
+        },
+        {
+          "font": "Song Myung",
+          "score": 81
+        },
+        {
+          "font": "Hahmlet",
+          "score": 76
+        },
+        {
+          "font": "Batang",
+          "score": 76
+        },
+        {
+          "font": "Noto Serif KR",
+          "score": 72
+        },
+        {
+          "font": "East Sea Dokdo",
+          "score": 70
+        },
+        {
+          "font": "Diphylleia",
+          "score": 70
+        }
+      ]
+    },
+    {
+      "purpose": "로고",
+      "text": "달빛카페",
+      "detected": "간판",
+      "top1": "Bagel Fat One",
+      "top1Score": 90,
+      "top8": [
+        {
+          "font": "Bagel Fat One",
+          "score": 90
+        },
+        {
+          "font": "Jua",
+          "score": 89
+        },
+        {
+          "font": "Dongle",
+          "score": 88
+        },
+        {
+          "font": "Kirang Haerang",
+          "score": 84
+        },
+        {
+          "font": "Gugi",
+          "score": 78
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 74
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 74
+        },
+        {
+          "font": "Gaegu",
+          "score": 72
+        }
+      ]
+    },
+    {
+      "purpose": "로고",
+      "text": "BUSAN MAKERS",
+      "detected": "로고",
+      "top1": "Orbit",
+      "top1Score": 94,
+      "top8": [
+        {
+          "font": "Orbit",
+          "score": 94
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Gothic A1",
+          "score": 91
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 89
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 88
+        },
+        {
+          "font": "Sunflower",
+          "score": 87
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 87
+        },
+        {
+          "font": "나눔고딕",
+          "score": 82
+        }
+      ]
+    },
+    {
+      "purpose": "로고",
+      "text": "아로새김",
+      "detected": "포스터",
+      "top1": "Orbit",
+      "top1Score": 94,
+      "top8": [
+        {
+          "font": "Orbit",
+          "score": 94
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 93
+        },
+        {
+          "font": "Gothic A1",
+          "score": 91
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 89
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 88
+        },
+        {
+          "font": "Sunflower",
+          "score": 87
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 87
+        },
+        {
+          "font": "나눔고딕",
+          "score": 82
+        }
+      ]
+    },
+    {
+      "purpose": "SNS",
+      "text": "귀여운 토끼 키링",
+      "detected": "SNS",
+      "top1": "Jua",
+      "top1Score": 91,
+      "top8": [
+        {
+          "font": "Jua",
+          "score": 91
+        },
+        {
+          "font": "Cute Font",
+          "score": 90
+        },
+        {
+          "font": "Gaegu",
+          "score": 89
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 89
+        },
+        {
+          "font": "Hi Melody",
+          "score": 88
+        },
+        {
+          "font": "Dongle",
+          "score": 88
+        },
+        {
+          "font": "Gamja Flower",
+          "score": 87
+        },
+        {
+          "font": "Single Day",
+          "score": 86
+        }
+      ]
+    },
+    {
+      "purpose": "SNS",
+      "text": "오늘도 수고했어",
+      "detected": "SNS",
+      "top1": "Gowun Batang",
+      "top1Score": 86,
+      "top8": [
+        {
+          "font": "Gowun Batang",
+          "score": 86
+        },
+        {
+          "font": "나눔펜스크립트",
+          "score": 82
+        },
+        {
+          "font": "Gamja Flower",
+          "score": 81
+        },
+        {
+          "font": "Diphylleia",
+          "score": 81
+        },
+        {
+          "font": "Single Day",
+          "score": 80
+        },
+        {
+          "font": "Hi Melody",
+          "score": 80
+        },
+        {
+          "font": "Jua",
+          "score": 79
+        },
+        {
+          "font": "Gowun Dodum",
+          "score": 79
+        }
+      ]
+    },
+    {
+      "purpose": "SNS",
+      "text": "좋은 하루",
+      "detected": "포스터",
+      "top1": "나눔고딕",
+      "top1Score": 88,
+      "top8": [
+        {
+          "font": "나눔고딕",
+          "score": 88
+        },
+        {
+          "font": "Gowun Dodum",
+          "score": 86
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 84
+        },
+        {
+          "font": "Sunflower",
+          "score": 81
+        },
+        {
+          "font": "Gothic A1",
+          "score": 81
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 78
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 78
+        },
+        {
+          "font": "Jua",
+          "score": 77
+        }
+      ]
+    },
+    {
+      "purpose": "SNS",
+      "text": "신상 출시",
+      "detected": "포스터",
+      "top1": "Noto Sans KR",
+      "top1Score": 91,
+      "top8": [
+        {
+          "font": "Noto Sans KR",
+          "score": 91
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 89
+        },
+        {
+          "font": "나눔고딕",
+          "score": 88
+        },
+        {
+          "font": "Orbit",
+          "score": 88
+        },
+        {
+          "font": "Gothic A1",
+          "score": 88
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 84
+        },
+        {
+          "font": "Sunflower",
+          "score": 84
+        },
+        {
+          "font": "Gowun Dodum",
+          "score": 83
+        }
+      ]
+    },
+    {
+      "purpose": "SNS",
+      "text": "오늘의 커피",
+      "detected": "포스터",
+      "top1": "Jua",
+      "top1Score": 92,
+      "top8": [
+        {
+          "font": "Jua",
+          "score": 92
+        },
+        {
+          "font": "Dongle",
+          "score": 91
+        },
+        {
+          "font": "Kirang Haerang",
+          "score": 88
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 88
+        },
+        {
+          "font": "Gaegu",
+          "score": 80
+        },
+        {
+          "font": "Gamja Flower",
+          "score": 78
+        },
+        {
+          "font": "Hi Melody",
+          "score": 78
+        },
+        {
+          "font": "Cute Font",
+          "score": 78
+        }
+      ]
+    },
+    {
+      "purpose": "SNS",
+      "text": "강아지 산책",
+      "detected": "포스터",
+      "top1": "Noto Sans KR",
+      "top1Score": 91,
+      "top8": [
+        {
+          "font": "Noto Sans KR",
+          "score": 91
+        },
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 89
+        },
+        {
+          "font": "나눔고딕",
+          "score": 88
+        },
+        {
+          "font": "Orbit",
+          "score": 88
+        },
+        {
+          "font": "Gothic A1",
+          "score": 88
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 84
+        },
+        {
+          "font": "Sunflower",
+          "score": 84
+        },
+        {
+          "font": "Gowun Dodum",
+          "score": 83
+        }
+      ]
+    },
+    {
+      "purpose": "SNS",
+      "text": "우리동네 맛집",
+      "detected": "SNS",
+      "top1": "Dongle",
+      "top1Score": 89,
+      "top8": [
+        {
+          "font": "Dongle",
+          "score": 89
+        },
+        {
+          "font": "Jua",
+          "score": 83
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 82
+        },
+        {
+          "font": "Kirang Haerang",
+          "score": 81
+        },
+        {
+          "font": "Gugi",
+          "score": 76
+        },
+        {
+          "font": "Gaegu",
+          "score": 72
+        },
+        {
+          "font": "Yeon Sung",
+          "score": 70
+        },
+        {
+          "font": "Gamja Flower",
+          "score": 70
+        }
+      ]
+    },
+    {
+      "purpose": "간판",
+      "text": "감천문화마을 작가거리",
+      "detected": "간판",
+      "top1": "Dokdo",
+      "top1Score": 88,
+      "top8": [
+        {
+          "font": "Dokdo",
+          "score": 88
+        },
+        {
+          "font": "East Sea Dokdo",
+          "score": 84
+        },
+        {
+          "font": "Yeon Sung",
+          "score": 79
+        },
+        {
+          "font": "Song Myung",
+          "score": 75
+        },
+        {
+          "font": "나눔명조",
+          "score": 74
+        },
+        {
+          "font": "Noto Serif KR",
+          "score": 74
+        },
+        {
+          "font": "Hahmlet",
+          "score": 74
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 73
+        }
+      ]
+    },
+    {
+      "purpose": "간판",
+      "text": "무지개공방",
+      "detected": "간판",
+      "top1": "Sunflower",
+      "top1Score": 80,
+      "top8": [
+        {
+          "font": "Sunflower",
+          "score": 80
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 79
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 79
+        },
+        {
+          "font": "East Sea Dokdo",
+          "score": 79
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 78
+        },
+        {
+          "font": "Gasoek One",
+          "score": 77
+        },
+        {
+          "font": "Gothic A1",
+          "score": 77
+        },
+        {
+          "font": "Gugi",
+          "score": 77
+        }
+      ]
+    },
+    {
+      "purpose": "간판",
+      "text": "다대포 수제맥주",
+      "detected": "SNS",
+      "top1": "Bagel Fat One",
+      "top1Score": 88,
+      "top8": [
+        {
+          "font": "Bagel Fat One",
+          "score": 88
+        },
+        {
+          "font": "Dongle",
+          "score": 87
+        },
+        {
+          "font": "Gugi",
+          "score": 85
+        },
+        {
+          "font": "Jua",
+          "score": 82
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 81
+        },
+        {
+          "font": "Kirang Haerang",
+          "score": 80
+        },
+        {
+          "font": "Dokdo",
+          "score": 79
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 78
+        }
+      ]
+    },
+    {
+      "purpose": "간판",
+      "text": "부산 청년마켓",
+      "detected": "포스터",
+      "top1": "Dongle",
+      "top1Score": 83,
+      "top8": [
+        {
+          "font": "Dongle",
+          "score": 83
+        },
+        {
+          "font": "Gugi",
+          "score": 81
+        },
+        {
+          "font": "Jua",
+          "score": 78
+        },
+        {
+          "font": "Dokdo",
+          "score": 78
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 77
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 77
+        },
+        {
+          "font": "Sunflower",
+          "score": 77
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 77
+        }
+      ]
+    },
+    {
+      "purpose": "간판",
+      "text": "어린이 체험존",
+      "detected": "포스터",
+      "top1": "Jua",
+      "top1Score": 84,
+      "top8": [
+        {
+          "font": "Jua",
+          "score": 84
+        },
+        {
+          "font": "Dongle",
+          "score": 83
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 82
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 81
+        },
+        {
+          "font": "Sunflower",
+          "score": 81
+        },
+        {
+          "font": "Bagel Fat One",
+          "score": 81
+        },
+        {
+          "font": "Gugi",
+          "score": 80
+        },
+        {
+          "font": "Gasoek One",
+          "score": 79
+        }
+      ]
+    },
+    {
+      "purpose": "간판",
+      "text": "아트 페스포트",
+      "detected": "포스터",
+      "top1": "IBM Plex Sans KR",
+      "top1Score": 90,
+      "top8": [
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 90
+        },
+        {
+          "font": "Gothic A1",
+          "score": 90
+        },
+        {
+          "font": "Sunflower",
+          "score": 89
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 88
+        },
+        {
+          "font": "Orbit",
+          "score": 88
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 87
+        },
+        {
+          "font": "Black Han Sans",
+          "score": 86
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 85
+        }
+      ]
+    },
+    {
+      "purpose": "간판",
+      "text": "출입구 안내",
+      "detected": "포스터",
+      "top1": "IBM Plex Sans KR",
+      "top1Score": 89,
+      "top8": [
+        {
+          "font": "IBM Plex Sans KR",
+          "score": 89
+        },
+        {
+          "font": "Gothic A1",
+          "score": 88
+        },
+        {
+          "font": "Dotum",
+          "score": 87
+        },
+        {
+          "font": "Nanum Gothic Coding",
+          "score": 86
+        },
+        {
+          "font": "Sunflower",
+          "score": 85
+        },
+        {
+          "font": "Noto Sans KR",
+          "score": 84
+        },
+        {
+          "font": "Orbit",
+          "score": 82
+        },
+        {
+          "font": "Do Hyeon",
+          "score": 81
+        }
+      ]
+    }
+  ]
+}

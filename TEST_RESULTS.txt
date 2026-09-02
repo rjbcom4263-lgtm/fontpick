@@ -1,0 +1,100 @@
+
+CASE "오늘도 수고했어" requested= 자동 detected= SNS effective= SNS vibe= editorial warm,emotional conf= 60
+ 84 나눔펜스크립트 | 짧은 문구에서 개성이 잘 드러남 / SNS 용도와 특히 잘 맞음 / 따뜻함 성격이 문구와 잘 맞음
+ 81 Jua | 짧은 문구에서 개성이 잘 드러남 / SNS 용도와 특히 잘 맞음 / 친근함 분위기와 잘 맞음
+ 77 나눔고딕 | SNS 용도와 특히 잘 맞음 / 따뜻함 성격이 문구와 잘 맞음 / 친근함 분위기와 잘 맞음
+ 77 나눔명조 | 감성 분위기와 잘 맞음 / 상업용 라이선스가 확인된 폰트 / 한글 문구를 안정적으로 표현함
+ 67 Noto Sans KR | SNS 용도와 특히 잘 맞음 / 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+
+CASE "다대포 맥주축제" requested= 자동 detected= 포스터 effective= 포스터 vibe= impact playful,poster,campaign,local,food,impact,friendly conf= 90
+ 89 Jua | 짧은 문구에서 개성이 잘 드러남 / 포스터 용도와 특히 잘 맞음 / 발랄함 성격이 문구와 잘 맞음
+ 86 Black Han Sans | 짧은 문구에서 개성이 잘 드러남 / 포스터 용도와 특히 잘 맞음 / 포스터성 성격이 문구와 잘 맞음
+ 79 Do Hyeon | 짧은 문구에서 개성이 잘 드러남 / 포스터 용도와 특히 잘 맞음 / 임팩트 성격이 문구와 잘 맞음
+ 67 Noto Sans KR | 포스터 용도와 특히 잘 맞음 / 강렬함 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+ 67 나눔고딕 | 친근함 성격이 문구와 잘 맞음 / 친근함 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+
+CASE "감천문화마을 작가거리" requested= 자동 detected= 간판 effective= 간판 vibe= editorial culture,local,street,traditional conf= 90
+ 81 나눔명조 | 문화적 성격이 문구와 잘 맞음 / 전통적 분위기와 잘 맞음 / 상업용 라이선스가 확인된 폰트
+ 72 Do Hyeon | 간판 용도와 특히 잘 맞음 / 전통적 분위기와 잘 맞음 / 상업용 라이선스가 확인된 폰트
+ 71 Black Han Sans | 간판 용도와 특히 잘 맞음 / 스트리트 성격이 문구와 잘 맞음 / 현대적 분위기와 잘 맞음
+ 64 Noto Sans KR | 간판 용도와 특히 잘 맞음 / 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+ 62 IBM Plex Sans KR | 간판 용도와 특히 잘 맞음 / 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+
+CASE "우리 결혼합니다" requested= 자동 detected= 청첩장 effective= 청첩장 vibe= editorial wedding,friendly,warm,emotional,luxury conf= 62
+ 88 나눔명조 | 청첩장 용도와 특히 잘 맞음 / 웨딩 성격이 문구와 잘 맞음 / 정중함 분위기와 잘 맞음
+ 83 나눔펜스크립트 | 짧은 문구에서 개성이 잘 드러남 / 청첩장 용도와 특히 잘 맞음 / 웨딩 성격이 문구와 잘 맞음
+ 70 Jua | 짧은 문구에서 개성이 잘 드러남 / 친근함 성격이 문구와 잘 맞음 / 친근함 분위기와 잘 맞음
+ 69 나눔고딕 | 친근함 성격이 문구와 잘 맞음 / 친근함 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+ 62 Noto Sans KR | 정중함 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함 / 상업용 라이선스가 확인된 폰트
+
+CASE "SAEGIM studio" requested= 자동 detected= 로고 effective= 로고 vibe= product modern conf= 58
+ 94 IBM Plex Sans KR | 로고 용도와 특히 잘 맞음 / 현대적 성격이 문구와 잘 맞음 / 현대적 분위기와 잘 맞음
+ 90 Black Han Sans | 로고 용도와 특히 잘 맞음 / 현대적 성격이 문구와 잘 맞음 / 현대적 분위기와 잘 맞음
+ 90 Do Hyeon | 로고 용도와 특히 잘 맞음 / 현대적 성격이 문구와 잘 맞음 / 현대적 분위기와 잘 맞음
+ 88 Noto Sans KR | 현대적 성격이 문구와 잘 맞음 / 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+ 81 나눔고딕 | 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함 / 상업용 라이선스가 확인된 폰트
+
+CASE "레트로 골목 간판" requested= 자동 detected= 간판 effective= 간판 vibe= impact signage,local,street,retro conf= 90
+ 86 Black Han Sans | 짧은 문구에서 개성이 잘 드러남 / 간판 용도와 특히 잘 맞음 / 간판 적합 성격이 문구와 잘 맞음
+ 77 Do Hyeon | 짧은 문구에서 개성이 잘 드러남 / 간판 용도와 특히 잘 맞음 / 간판 적합 성격이 문구와 잘 맞음
+ 74 Noto Sans KR | 간판 용도와 특히 잘 맞음 / 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+ 74 IBM Plex Sans KR | 간판 용도와 특히 잘 맞음 / 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+ 73 Jua | 짧은 문구에서 개성이 잘 드러남 / 친근함 분위기와 잘 맞음 / 상업용 라이선스가 확인된 폰트
+
+CASE "다대포에서 만나요" requested= 레이저 각인 detected= 포스터 effective= 레이저 각인 vibe= playful local conf= 46
+ 92 Do Hyeon | 획 안정성이 높아 각인에 유리 / 윤곽이 단순해 벡터 각인에 유리 / 레이저 각인 용도와 특히 잘 맞음
+ 91 Noto Sans KR | 작은 글자에서도 형태가 잘 유지됨 / 획 안정성이 높아 각인에 유리 / 레이저 각인 용도와 특히 잘 맞음
+ 90 IBM Plex Sans KR | 획 안정성이 높아 각인에 유리 / 윤곽이 단순해 벡터 각인에 유리 / 레이저 각인 용도와 특히 잘 맞음
+ 87 나눔고딕 | 윤곽이 단순해 벡터 각인에 유리 / 작은 글자에서도 형태가 잘 유지됨 / 친근함 분위기와 잘 맞음
+ 72 Jua | 윤곽이 단순해 벡터 각인에 유리 / 획 안정성이 높아 각인에 유리 / 친근함 분위기와 잘 맞음
+
+CASE "홍길동" requested= 레이저 각인 detected= 포스터 effective= 레이저 각인 vibe= product clean,modern,readable conf= 46
+ 94 Do Hyeon | 획 안정성이 높아 각인에 유리 / 윤곽이 단순해 벡터 각인에 유리 / 짧은 문구에서 개성이 잘 드러남
+ 93 Noto Sans KR | 작은 글자에서도 형태가 잘 유지됨 / 획 안정성이 높아 각인에 유리 / 레이저 각인 용도와 특히 잘 맞음
+ 93 IBM Plex Sans KR | 획 안정성이 높아 각인에 유리 / 윤곽이 단순해 벡터 각인에 유리 / 레이저 각인 용도와 특히 잘 맞음
+ 87 나눔고딕 | 윤곽이 단순해 벡터 각인에 유리 / 작은 글자에서도 형태가 잘 유지됨 / 깔끔함 성격이 문구와 잘 맞음
+ 71 Black Han Sans | 윤곽이 단순해 벡터 각인에 유리 / 획 안정성이 높아 각인에 유리 / 짧은 문구에서 개성이 잘 드러남
+
+CASE "SALE 50%" requested= 포스터 detected= 포스터 effective= 포스터 vibe= impact impact,poster,campaign conf= 100
+ 96 Black Han Sans | 짧은 문구에서 개성이 잘 드러남 / 포스터 용도와 특히 잘 맞음 / 임팩트 성격이 문구와 잘 맞음
+ 87 Do Hyeon | 짧은 문구에서 개성이 잘 드러남 / 포스터 용도와 특히 잘 맞음 / 임팩트 성격이 문구와 잘 맞음
+ 81 Noto Sans KR | 포스터 용도와 특히 잘 맞음 / 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+ 81 Jua | 짧은 문구에서 개성이 잘 드러남 / 포스터 용도와 특히 잘 맞음 / 현대적 분위기와 잘 맞음
+ 79 IBM Plex Sans KR | 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함 / 상업용 라이선스가 확인된 폰트
+
+CASE "귀여운 토끼 키링" requested= SNS detected= SNS effective= SNS vibe= playful cute conf= 100
+ 94 Jua | 짧은 문구에서 개성이 잘 드러남 / SNS 용도와 특히 잘 맞음 / 귀여움 성격이 문구와 잘 맞음
+ 78 나눔펜스크립트 | 짧은 문구에서 개성이 잘 드러남 / SNS 용도와 특히 잘 맞음 / 귀여움 분위기와 잘 맞음
+ 71 나눔고딕 | SNS 용도와 특히 잘 맞음 / 친근함 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+ 56 Do Hyeon | 짧은 문구에서 개성이 잘 드러남 / 현대적 분위기와 잘 맞음 / 상업용 라이선스가 확인된 폰트
+ 54 Noto Sans KR | SNS 용도와 특히 잘 맞음 / 현대적 분위기와 잘 맞음 / 작은 크기에서도 가독성이 우수함
+
+오늘도 수고했어 / 레이저 각인 / auto=SNS / vibe=warm,emotional
+Noto Sans KR:90 | Do Hyeon:90 | 나눔고딕:88 | IBM Plex Sans KR:87
+
+오늘 당신과 함께한 이 순간을 오래도록 기억합니다 / 레이저 각인 / auto=청첩장 / vibe=emotional,warm
+Noto Sans KR:91 | 나눔고딕:89 | Do Hyeon:88 | IBM Plex Sans KR:88
+
+2026 DADAePO BEER FESTIVAL / 레이저 각인 / auto=포스터 / vibe=impact,poster,campaign
+Do Hyeon:93 | Noto Sans KR:92 | IBM Plex Sans KR:92 | 나눔고딕:87
+
+감천의 오래된 이야기를 기억합니다 / 레이저 각인 / auto=SNS / vibe=emotional,local,retro,street
+Noto Sans KR:91 | Do Hyeon:89 | IBM Plex Sans KR:89 | 나눔고딕:88
+
+OPEN / 간판 / auto=로고 / vibe=clean,modern,readable
+Do Hyeon:89 | IBM Plex Sans KR:89 | Black Han Sans:88 | Noto Sans KR:87
+
+부산 감천문화마을 / 간판 / auto=간판 / vibe=local,culture,traditional
+나눔명조:81 | Do Hyeon:72 | Black Han Sans:66 | Noto Sans KR:64
+
+봄날의 작은 결혼식에 초대합니다 / 청첩장 / auto=청첩장 / vibe=wedding,warm,emotional,luxury
+나눔명조:90 | 나눔펜스크립트:80 | 나눔고딕:71 | Jua:67
+
+새김 / 로고 / auto=포스터 / vibe=clean,modern,readable
+IBM Plex Sans KR:94 | Do Hyeon:90 | Noto Sans KR:89 | Black Han Sans:83
+
+FONT PICK / 로고 / auto=로고 / vibe=clean,modern,readable
+IBM Plex Sans KR:94 | Noto Sans KR:89 | Do Hyeon:89 | Black Han Sans:83
+
+오늘도 행복하자♡ / SNS / auto=SNS / vibe=warm,emotional
+나눔펜스크립트:83 | 나눔명조:79 | Jua:79 | 나눔고딕:77

@@ -1,0 +1,94 @@
+
+@import 'tailwindcss';
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Instrument Sans', 'Noto Sans KR', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 transparent;
+}
+
+*::-webkit-scrollbar { width: 4px; height: 4px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background-color: #CBD5E1; border-radius: 2px; }
+
+@theme inline {
+  --color-bg: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-primary: #0F172A;
+  --color-accent: #1D4ED8;
+  --color-accent-hover: #1E40AF;
+  --color-border: #E2E8F0;
+  --color-muted: #64748B;
+  --color-success: #15803D;
+  --font-display: 'Instrument Sans', sans-serif;
+  --font-body: 'Noto Sans KR', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+.font-display { font-family: 'Instrument Sans', sans-serif; }
+.font-body { font-family: 'Noto Sans KR', sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+.preview-noto { font-family: 'Noto Sans KR', sans-serif; }
+.preview-nanum-gothic { font-family: 'Nanum Gothic', sans-serif; }
+.preview-nanum-myeongjo { font-family: 'Nanum Myeongjo', serif; }
+.preview-black-han { font-family: 'Black Han Sans', sans-serif; }
+.preview-do-hyeon { font-family: 'Do Hyeon', sans-serif; }
+.preview-jua { font-family: 'Jua', sans-serif; }
+.preview-ibm-plex { font-family: 'IBM Plex Sans KR', sans-serif; }
+.preview-nanum-pen { font-family: 'Nanum Pen Script', cursive; }
+
+.preview-noto-serif { font-family: "Noto Serif KR", serif; }
+.preview-hahmlet { font-family: "Hahmlet", serif; }
+.preview-gowun-batang { font-family: "Gowun Batang", serif; }
+.preview-gowun-dodum { font-family: "Gowun Dodum", sans-serif; }
+.preview-song-myung { font-family: "Song Myung", serif; }
+.preview-yeon-sung { font-family: "Yeon Sung", cursive; }
+.preview-gaegu { font-family: "Gaegu", cursive; }
+.preview-single-day { font-family: "Single Day", cursive; }
+.preview-gamja-flower { font-family: "Gamja Flower", cursive; }
+.preview-kirang { font-family: "Kirang Haerang", cursive; }
+.preview-stylish { font-family: "Stylish", cursive; }
+.preview-sunflower { font-family: "Sunflower", sans-serif; }
+.preview-hi-melody { font-family: "Hi Melody", cursive; }
+.preview-poor-story { font-family: "Poor Story", cursive; }
+.preview-cute-font { font-family: "Cute Font", cursive; }
+.preview-east-sea-dokdo { font-family: "East Sea Dokdo", cursive; }
+.preview-dokdo { font-family: "Dokdo", cursive; }
+.preview-bw-picture { font-family: "Black And White Picture", cursive; }
+.preview-nanum-brush { font-family: "Nanum Brush Script", cursive; }
+.preview-nanum-coding { font-family: "Nanum Gothic Coding", monospace; }
+.preview-gasoek { font-family: "Gasoek One", sans-serif; }
+.preview-grandiflora { font-family: "Grandiflora One", serif; }
+.preview-dongle { font-family: "Dongle", sans-serif; }
+.preview-bagel-fat { font-family: "Bagel Fat One", sans-serif; }
+.preview-diphylleia { font-family: "Diphylleia", serif; }
+.preview-orbit { font-family: "Orbit", monospace; }
+.preview-gothic-a1 { font-family: "Gothic A1", sans-serif; }
+.preview-gugi { font-family: "Gugi", sans-serif; }
+.preview-batang { font-family: "Batang", serif; }
+.preview-dotum { font-family: "Dotum", sans-serif; }
+
+.checkerboard {
+  background-color: #fff;
+  background-image:
+    linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+    linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+    linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+  background-size: 12px 12px;
+  background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
+}
+
+.transition-base {
+  transition: all 0.15s ease;
+}

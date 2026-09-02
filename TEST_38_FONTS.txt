@@ -1,0 +1,99 @@
+TOTAL 38 APPROVED 38
+
+TEST "홍길동" 레이저 각인 auto= 포스터
+1 Do Hyeon 93 laser 93.8
+2 Orbit 93 laser 92.5
+3 Gothic A1 93 laser 92.5
+4 Noto Sans KR 92 laser 92.3
+5 IBM Plex Sans KR 92 laser 92
+
+TEST "다대포에서 만나요" 레이저 각인 auto= 포스터
+1 Do Hyeon 92 laser 93.8
+2 Noto Sans KR 91 laser 92.3
+3 Gothic A1 91 laser 92.5
+4 Dotum 91 laser 93.5
+5 IBM Plex Sans KR 90 laser 92
+
+TEST "오늘 당신과 함께한 이 순간을 오래도록 기억합니다" 레이저 각인 auto= 청첩장
+1 Noto Sans KR 91 laser 92.3
+2 Gothic A1 91 laser 92.5
+3 Dotum 91 laser 93.5
+4 Do Hyeon 90 laser 93.8
+5 IBM Plex Sans KR 90 laser 92
+
+TEST "SAEGIM 2026" 레이저 각인 auto= 포스터
+1 Nanum Gothic Coding 97 laser 95.5
+2 Noto Sans KR 93 laser 92.3
+3 Do Hyeon 93 laser 93.8
+4 IBM Plex Sans KR 93 laser 92
+5 Orbit 93 laser 92.5
+
+TEST "잠시 주차중입니다" 레이저 각인 auto= 포스터
+1 Noto Sans KR 93 laser 92.3
+2 Do Hyeon 93 laser 93.8
+3 IBM Plex Sans KR 93 laser 92
+4 Orbit 93 laser 92.5
+5 Gothic A1 93 laser 92.5
+
+TEST "감천문화마을" 레이저 각인 auto= 간판
+1 Do Hyeon 91 laser 93.8
+2 Dotum 90 laser 93.5
+3 Noto Sans KR 88 laser 92.3
+4 Gothic A1 88 laser 92.5
+5 IBM Plex Sans KR 87 laser 92
+
+TEST "SALE 50%" 포스터 auto= 포스터
+1 Black Han Sans 96 laser 70.3
+2 Gasoek One 94 laser 81.5
+3 Bagel Fat One 92 laser 81
+4 Gugi 92 laser 75.5
+5 Dokdo 88 laser 39.5
+
+TEST "다대포 맥주축제" 포스터 auto= 포스터
+1 Dongle 89 laser 70.5
+2 Bagel Fat One 89 laser 81
+3 Kirang Haerang 87 laser 43.8
+4 Gugi 86 laser 75.5
+5 Dokdo 84 laser 39.5
+
+TEST "우리 결혼합니다" 청첩장 auto= 청첩장
+1 Gowun Batang 90 laser 55.5
+2 나눔명조 87 laser 60
+3 Noto Serif KR 87 laser 65
+4 Diphylleia 86 laser 32.5
+5 Grandiflora One 85 laser 20
+
+TEST "오래도록 기억할게" 청첩장 auto= SNS
+1 Gowun Batang 93 laser 55.5
+2 Diphylleia 92 laser 32.5
+3 Noto Serif KR 91 laser 65
+4 나눔명조 90 laser 60
+5 Song Myung 89 laser 51.5
+
+TEST "SAEGIM studio" 로고 auto= 로고
+1 IBM Plex Sans KR 93 laser 92
+2 Orbit 93 laser 92.5
+3 Gothic A1 91 laser 92.5
+4 Black Han Sans 90 laser 70.3
+5 Do Hyeon 89 laser 93.8
+
+TEST "AI DESIGN LAB" 로고 auto= 로고
+1 Orbit 94 laser 92.5
+2 IBM Plex Sans KR 93 laser 92
+3 Nanum Gothic Coding 88 laser 95.5
+4 Gothic A1 80 laser 92.5
+5 Do Hyeon 79 laser 93.8
+
+TEST "귀여운 토끼 키링" SNS auto= SNS
+1 Jua 91 laser 74
+2 Cute Font 90 laser 27
+3 Gaegu 89 laser 38.8
+4 Bagel Fat One 89 laser 81
+5 Hi Melody 88 laser 29.3
+
+TEST "감천문화마을 작가거리" 간판 auto= 간판
+1 Dokdo 88 laser 39.5
+2 East Sea Dokdo 84 laser 39
+3 Yeon Sung 79 laser 44.3
+4 Song Myung 75 laser 51.5
+5 나눔명조 74 laser 60

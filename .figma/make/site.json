@@ -1,0 +1,11 @@
+{
+  "title": "FontPick",
+  "description": "입력한 문구와 용도에 어울리는 상업용 한글 폰트를 추천합니다.",
+  "language": "ko",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": true
+  }
+}
