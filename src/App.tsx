@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { rankBM25 } from './recommendation/bm25'
 import { analyzeKoreanVibe, vibeLabel, type KoreanVibeAnalysis, type VibeTag } from './recommendation/koreanVibe'
 import { filterCommerciallyApproved } from './recommendation/licenseGate'
+import { diversifyTop } from './recommendation/diversify'
 import { EXTERNAL_FONT_CATALOG, externalFontName, normalizeFontName, type ExternalFontRuntime } from './data/externalFonts'
 
 type Screen = 'landing' | 'results' | 'compare' | 'download'
@@ -35,6 +36,7 @@ interface FontData {
   fontFamily?: string
   fontFileUrl?: string
   stylesheetUrl?: string
+  provider?: string
   score: number
   tags: string[]
   license: string
@@ -925,7 +927,10 @@ const BASE_FONTS: FontData[] = [
   },
 ]
 
-const externalProfile = (category: string): FontProfile => {
+const clampProfile = (value: number) => Math.max(0, Math.min(100, value))
+
+const externalProfile = (font: ExternalFontRuntime): FontProfile => {
+  const { category } = font
   const handwriting = category.includes('handwriting') || category.includes('brush')
   const serif = category.includes('serif')
   const display = category.includes('display')
@@ -935,7 +940,7 @@ const externalProfile = (category: string): FontProfile => {
     ? [category.includes('brush') ? '붓글씨' : '손글씨']
     : serif ? ['명조'] : display ? ['디스플레이'] : ['고딕']
 
-  return {
+  const profile: FontProfile = {
     moods: {
       warm: handwriting ? 86 : rounded ? 76 : serif ? 65 : 55,
       emotional: handwriting ? 92 : serif ? 80 : 45,
@@ -973,6 +978,38 @@ const externalProfile = (category: string): FontProfile => {
       '청첩장': serif || handwriting ? 90 : 62,
     },
   }
+
+  // The collection only provides broad categories. Name signals add useful,
+  // conservative priors while a small stable jitter prevents 109 handwriting
+  // families from receiving an identical score.
+  const seed = [...font.displayName].reduce((value, character) => ((value * 31) + (character.codePointAt(0) ?? 0)) >>> 0, 2166136261)
+  const jitter = (offset: number, spread = 7) => ((seed >>> (offset % 20)) % spread) - Math.floor(spread / 2)
+  ;(Object.keys(profile.moods) as MoodKey[]).forEach((key, index) => {
+    profile.moods[key] = clampProfile(profile.moods[key] + jitter(index * 3))
+  })
+  profile.readability = clampProfile(profile.readability + jitter(2, 9))
+  profile.smallText = clampProfile(profile.smallText + jitter(5, 9))
+  profile.displayStrength = clampProfile(profile.displayStrength + jitter(8, 9))
+  profile.popularity = clampProfile(profile.popularity + jitter(11, 9))
+
+  const name = font.displayName
+  const boost = (keys: MoodKey[], amount: number) => keys.forEach(key => {
+    profile.moods[key] = clampProfile(profile.moods[key] + amount)
+  })
+  if (/사랑|엄마|아빠|아내|위로|희망|행복|마음|편지|꽃/.test(name)) boost(['warm', 'emotional', 'friendly'], 8)
+  if (/아기|꾸미|꾸부리|먽멍|몽돌|반짝|소녀|동화|예쁜/.test(name)) boost(['cute', 'playful', 'friendly'], 9)
+  if (/강인|부장|고딕|힘|혁이|열아홉|을지로/.test(name)) {
+    boost(['strong'], 7)
+    profile.displayStrength = clampProfile(profile.displayStrength + 7)
+  }
+  if (/옛|고려|붓|무궁화|선비|명조/.test(name)) boost(['traditional', 'luxury'], 9)
+  if (/바른|또박|고딕|정자|단정/.test(name)) {
+    profile.readability = clampProfile(profile.readability + 10)
+    profile.smallText = clampProfile(profile.smallText + 8)
+    boost(['formal', 'modern'], 6)
+  }
+  if (/붓|을지로/.test(name) && !profile.styles.includes('붓글씨')) profile.styles.push('붓글씨')
+  return profile
 }
 
 const externalToFontData = (font: ExternalFontRuntime, index: number): FontData => {
@@ -980,6 +1017,7 @@ const externalToFontData = (font: ExternalFontRuntime, index: number): FontData 
   const display = font.category.includes('display')
   const serif = font.category.includes('serif')
   const provider = font.provider === 'naver' ? '네이버' : font.provider === 'baemin' ? '배달의민족' : font.provider.toUpperCase()
+  const profile = externalProfile(font)
   return {
     id: 56 + index,
     name: externalFontName(font),
@@ -987,6 +1025,7 @@ const externalToFontData = (font: ExternalFontRuntime, index: number): FontData 
     fontFamily: font.fontFamily,
     fontFileUrl: font.fontFileUrl,
     stylesheetUrl: font.stylesheetUrl,
+    provider: font.provider,
     score: handwriting ? 79 : display ? 82 : 84,
     tags: handwriting ? ['감성', '손글씨', '친근한'] : serif ? ['명조', '고급', '전통'] : display ? ['디스플레이', '강렬'] : ['고딕', '현대적', '가독성'],
     license: font.provider === 'naver' ? 'NAVER 나눔글꼴 라이선스' : 'SIL OFL 1.1',
@@ -998,7 +1037,7 @@ const externalToFontData = (font: ExternalFontRuntime, index: number): FontData 
     goodFor: handwriting ? ['SNS', '청첩장', '포스터'] : display ? ['로고', '간판', '포스터'] : ['로고', 'SNS', '포스터'],
     weight: '400',
     reasons: [],
-    profile: externalProfile(font.category),
+    profile,
   }
 }
 
@@ -1478,6 +1517,32 @@ const sortFonts = (fonts: FontData[], sortBy: SortOption) => [...fonts].sort((a,
   return b.score - a.score
 })
 
+const fontProviderGroup = (font: FontData) => {
+  if (font.provider) return font.provider
+  if (font.id <= 47) return 'google'
+  if (['Maru Buri', 'Nanum Square', 'D2Coding'].includes(font.name)) return 'naver'
+  return normalizeFontName(font.name)
+}
+
+const fontStyleGroup = (font: FontData) => {
+  if (font.profile.styles.includes('붓글씨')) return 'brush'
+  if (font.profile.styles.includes('손글씨')) return 'handwriting'
+  if (font.profile.styles.includes('명조')) return 'serif'
+  if (font.profile.styles.includes('디스플레이')) return 'display'
+  if (font.name.includes('Coding') || font.name.includes('Mono')) return 'monospace'
+  return 'sans'
+}
+
+const orderFonts = (fonts: FontData[], sortBy: SortOption) => {
+  const sorted = sortFonts(fonts, sortBy)
+  if (sortBy !== '추천순') return sorted
+  return diversifyTop(sorted, font => ({
+    score: font.score,
+    provider: fontProviderGroup(font),
+    group: fontStyleGroup(font),
+  }))
+}
+
 const getAnalysisHighlights = (analysis: TextAnalysis) =>
   (Object.keys(analysis.moods) as MoodKey[])
     .map(key => ({ label: MOOD_LABELS[key], value: analysis.moods[key] }))
@@ -1648,7 +1713,7 @@ export default function App() {
   const approvedFonts = filterCommerciallyApproved(FONTS)
   const rankedFonts = scoreFonts(approvedFonts, analysis, effectivePurpose)
   const analysisHighlights = getAnalysisHighlights(analysis)
-  const filteredSortedFonts = sortFonts(
+  const filteredSortedFonts = orderFonts(
     rankedFonts.filter(font => activeFilters.length === 0 || activeFilters.every(filter => filterMatches(font, filter))),
     sortBy,
   )

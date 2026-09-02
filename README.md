@@ -21,6 +21,8 @@ npm run dev
 - 용도별 추천: 자동 / 로고 / 레이저 각인 / 간판 / 포스터 / SNS / 청첩장
 - 레이저 각인 전용 점수 보정
 - 추천 결과 24개씩 더 보기와 현재 표시 폰트만 동적 로딩
+- 문구·용도 적합도 점수 후 상위 12개를 배포사·스타일 다양성으로 재정렬
+- 네이버 손글씨를 포함한 외부 폰트의 이름·분류 신호를 감성·가독성·강도 프로필에 반영
 - 라이선스 감사 자료 및 회귀 테스트 결과 포함
 
 Google Fonts 47개 기준선과 외부 후보 데이터는 `FONT_COLLECTION_55.md`, `EXTERNAL_FONT_CANDIDATES.json`, `NAVER_FONT_COLLECTION.json`, `BAEMIN_FONT_COLLECTION.json`에서 확인할 수 있습니다.
