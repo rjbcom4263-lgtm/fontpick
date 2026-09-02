@@ -664,6 +664,156 @@ const FONTS: FontData[] = [
       purposes: { '로고': 80, '레이저 각인': 98, '간판': 90, '포스터': 72, 'SNS': 76, '청첩장': 52 },
     },
   },
+  {
+    id: 39, name: 'Asta Sans', cssClass: 'preview-asta-sans',
+    score: 84, tags: ['현대적', '미니멀', '가독성'],
+    license: 'SIL OFL 1.1', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: 'Google Fonts', weight: '500',
+    description: '화면 본문과 브랜드 문구에 균형 있게 사용할 수 있는 현대적인 한글 산세리프.',
+    goodFor: ['로고', '레이저 각인', 'SNS'], reasons: [],
+    profile: {
+      moods: { warm: 42, emotional: 32, cute: 14, formal: 84, strong: 52, modern: 94, traditional: 24, playful: 30, friendly: 55, luxury: 62 },
+      styles: ['고딕', '미니멀'], readability: 95, smallText: 94, displayStrength: 76, popularity: 62,
+      laser: { stroke: 94, smallText: 95, counter: 91, simplicity: 94 },
+      vibeTags: ['clean', 'minimal', 'modern', 'readable', 'formal', 'brand'],
+      purposes: { '로고': 92, '레이저 각인': 97, '간판': 90, '포스터': 86, 'SNS': 88, '청첩장': 58 },
+    },
+  },
+  {
+    id: 40, name: 'Moirai One', cssClass: 'preview-moirai-one',
+    score: 72, tags: ['강렬', '귀여운', '디스플레이'],
+    license: 'SIL OFL 1.1', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: 'Google Fonts', weight: '400',
+    description: '선으로 짠 듯한 독특한 형태가 짧은 로고와 문화 행사 제목에서 돋보이는 디스플레이 폰트.',
+    goodFor: ['로고', '포스터', '간판'], reasons: [],
+    profile: {
+      moods: { warm: 35, emotional: 48, cute: 74, formal: 12, strong: 84, modern: 88, traditional: 35, playful: 94, friendly: 58, luxury: 55 },
+      styles: ['디스플레이'], readability: 45, smallText: 24, displayStrength: 99, popularity: 58,
+      laser: { stroke: 32, smallText: 20, counter: 48, simplicity: 38 },
+      vibeTags: ['impact', 'playful', 'poster', 'culture', 'brand', 'modern'],
+      purposes: { '로고': 96, '레이저 각인': 25, '간판': 82, '포스터': 96, 'SNS': 88, '청첩장': 48 },
+    },
+  },
+  {
+    id: 41, name: 'Pretendard', cssClass: 'preview-pretendard',
+    score: 94, tags: ['현대적', '미니멀', '가독성'],
+    license: 'SIL OFL 1.1', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: '공식 CDN', weight: '500',
+    description: '한국어 디지털 환경에 최적화된 범용 산세리프. UI, 본문, 브랜드 문구 모두에 안정적.',
+    goodFor: ['로고', '레이저 각인', '간판', 'SNS'], reasons: [],
+    profile: {
+      moods: { warm: 48, emotional: 32, cute: 12, formal: 88, strong: 50, modern: 98, traditional: 20, playful: 28, friendly: 58, luxury: 70 },
+      styles: ['고딕', '미니멀'], readability: 98, smallText: 98, displayStrength: 80, popularity: 98,
+      laser: { stroke: 96, smallText: 98, counter: 94, simplicity: 96 },
+      vibeTags: ['clean', 'minimal', 'modern', 'readable', 'formal', 'brand', 'tech'],
+      purposes: { '로고': 97, '레이저 각인': 98, '간판': 94, '포스터': 90, 'SNS': 94, '청첩장': 62 },
+    },
+  },
+  {
+    id: 42, name: 'SUIT', cssClass: 'preview-suit',
+    score: 91, tags: ['현대적', '미니멀', '가독성'],
+    license: 'SIL OFL 1.1', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: '공식 CDN', weight: '500',
+    description: '반복되는 UI와 본문 환경에서 높은 완성도를 유지하도록 설계된 깔끔한 한글 산세리프.',
+    goodFor: ['로고', '레이저 각인', 'SNS'], reasons: [],
+    profile: {
+      moods: { warm: 45, emotional: 30, cute: 12, formal: 90, strong: 48, modern: 98, traditional: 18, playful: 24, friendly: 52, luxury: 72 },
+      styles: ['고딕', '미니멀'], readability: 98, smallText: 98, displayStrength: 78, popularity: 88,
+      laser: { stroke: 95, smallText: 98, counter: 94, simplicity: 96 },
+      vibeTags: ['clean', 'minimal', 'modern', 'readable', 'formal', 'tech', 'brand'],
+      purposes: { '로고': 96, '레이저 각인': 98, '간판': 92, '포스터': 88, 'SNS': 93, '청첩장': 58 },
+    },
+  },
+  {
+    id: 43, name: 'Wanted Sans', cssClass: 'preview-wanted-sans',
+    score: 90, tags: ['현대적', '강렬', '가독성'],
+    license: 'SIL OFL 1.1', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: '공식 CDN', weight: '600',
+    description: '기하학적인 인상과 읽기 쉬운 구조를 함께 갖춘 제목·본문 겸용 브랜드 산세리프.',
+    goodFor: ['로고', '간판', '포스터'], reasons: [],
+    profile: {
+      moods: { warm: 38, emotional: 28, cute: 16, formal: 84, strong: 72, modern: 98, traditional: 18, playful: 38, friendly: 48, luxury: 75 },
+      styles: ['고딕', '미니멀'], readability: 96, smallText: 94, displayStrength: 88, popularity: 84,
+      laser: { stroke: 94, smallText: 94, counter: 92, simplicity: 95 },
+      vibeTags: ['modern', 'brand', 'clean', 'readable', 'impact', 'tech'],
+      purposes: { '로고': 99, '레이저 각인': 96, '간판': 96, '포스터': 94, 'SNS': 90, '청첩장': 55 },
+    },
+  },
+  {
+    id: 44, name: 'Spoqa Han Sans Neo', cssClass: 'preview-spoqa',
+    score: 89, tags: ['현대적', '가독성', '친근한'],
+    license: 'SIL OFL 1.1', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: '공식 CDN', weight: '400',
+    description: '숫자와 다국어 조화가 좋고 작은 화면에서도 균일하게 읽히는 서비스용 산세리프.',
+    goodFor: ['SNS', '레이저 각인', '로고'], reasons: [],
+    profile: {
+      moods: { warm: 55, emotional: 34, cute: 18, formal: 86, strong: 42, modern: 94, traditional: 20, playful: 28, friendly: 68, luxury: 60 },
+      styles: ['고딕', '미니멀'], readability: 98, smallText: 98, displayStrength: 72, popularity: 86,
+      laser: { stroke: 94, smallText: 98, counter: 94, simplicity: 95 },
+      vibeTags: ['clean', 'modern', 'readable', 'friendly', 'formal', 'tech'],
+      purposes: { '로고': 92, '레이저 각인': 97, '간판': 88, '포스터': 86, 'SNS': 96, '청첩장': 62 },
+    },
+  },
+  {
+    id: 45, name: 'Maru Buri', cssClass: 'preview-maru-buri',
+    score: 86, tags: ['감성', '고급', '가독성'],
+    license: 'NAVER Open Font License', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: '공식 배포', weight: '400',
+    description: '화면에서 긴 글을 편안하게 읽도록 만든 네이버의 부리계열 본문 글꼴.',
+    goodFor: ['청첩장', '포스터', 'SNS'], reasons: [],
+    profile: {
+      moods: { warm: 82, emotional: 90, cute: 12, formal: 86, strong: 28, modern: 65, traditional: 82, playful: 18, friendly: 62, luxury: 92 },
+      styles: ['명조'], readability: 94, smallText: 82, displayStrength: 78, popularity: 82,
+      laser: { stroke: 58, smallText: 62, counter: 68, simplicity: 70 },
+      vibeTags: ['editorial', 'poetic', 'traditional', 'readable', 'luxury', 'wedding'],
+      purposes: { '로고': 82, '레이저 각인': 58, '간판': 64, '포스터': 88, 'SNS': 78, '청첩장': 98 },
+    },
+  },
+  {
+    id: 46, name: 'Nanum Square', cssClass: 'preview-nanum-square',
+    score: 87, tags: ['현대적', '강렬', '가독성'],
+    license: 'NAVER Open Font License', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: '공식 배포', weight: '700',
+    description: '제목을 선명하게 만드는 네이버의 직선적인 산세리프. 브랜드와 간판에 강함.',
+    goodFor: ['로고', '간판', '포스터'], reasons: [],
+    profile: {
+      moods: { warm: 42, emotional: 30, cute: 18, formal: 82, strong: 78, modern: 94, traditional: 20, playful: 36, friendly: 50, luxury: 66 },
+      styles: ['고딕', '미니멀'], readability: 92, smallText: 88, displayStrength: 92, popularity: 88,
+      laser: { stroke: 94, smallText: 90, counter: 90, simplicity: 94 },
+      vibeTags: ['modern', 'brand', 'clean', 'impact', 'signage', 'readable'],
+      purposes: { '로고': 97, '레이저 각인': 95, '간판': 98, '포스터': 95, 'SNS': 88, '청첩장': 52 },
+    },
+  },
+  {
+    id: 47, name: 'Gmarket Sans', cssClass: 'preview-gmarket-sans',
+    score: 86, tags: ['현대적', '강렬', '친근한'],
+    license: 'SIL OFL 1.1', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: '공식 배포', weight: '500',
+    description: '기하학적이고 또렷한 인상에 자연스러운 필순을 더한 대중적인 브랜드 산세리프.',
+    goodFor: ['로고', '포스터', '간판'], reasons: [],
+    profile: {
+      moods: { warm: 52, emotional: 32, cute: 24, formal: 68, strong: 82, modern: 94, traditional: 18, playful: 58, friendly: 70, luxury: 55 },
+      styles: ['고딕', '디스플레이'], readability: 90, smallText: 84, displayStrength: 94, popularity: 90,
+      laser: { stroke: 94, smallText: 86, counter: 88, simplicity: 94 },
+      vibeTags: ['modern', 'brand', 'impact', 'poster', 'friendly', 'signage'],
+      purposes: { '로고': 98, '레이저 각인': 94, '간판': 98, '포스터': 98, 'SNS': 92, '청첩장': 48 },
+    },
+  },
+  {
+    id: 48, name: 'D2Coding', cssClass: 'preview-d2coding',
+    score: 85, tags: ['기술적', '미니멀', '가독성'],
+    license: 'SIL OFL 1.1', commercial: true, modifiable: true, redistribute: true,
+    downloadCount: '공식 웹폰트', weight: '400',
+    description: '한글·영문·숫자의 구분과 정렬에 최적화된 네이버 고정폭 폰트.',
+    goodFor: ['레이저 각인', '로고', '간판'], reasons: [],
+    profile: {
+      moods: { warm: 22, emotional: 18, cute: 8, formal: 82, strong: 48, modern: 94, traditional: 18, playful: 20, friendly: 30, luxury: 52 },
+      styles: ['고딕', '미니멀'], readability: 98, smallText: 99, displayStrength: 72, popularity: 84,
+      laser: { stroke: 96, smallText: 99, counter: 94, simplicity: 96 },
+      vibeTags: ['tech', 'modern', 'clean', 'minimal', 'readable', 'formal'],
+      purposes: { '로고': 90, '레이저 각인': 99, '간판': 90, '포스터': 82, 'SNS': 82, '청첩장': 42 },
+    },
+  },
 ]
 
 
@@ -696,8 +846,19 @@ const DYNAMIC_GOOGLE_FONT_SPECS: Record<string, string> = {
   'preview-orbit': 'Orbit',
   'preview-gothic-a1': 'Gothic+A1:wght@400;700',
   'preview-gugi': 'Gugi',
-  'preview-batang': 'Batang',
   'preview-dotum': 'Dotum',
+  'preview-asta-sans': 'Asta+Sans:wght@400;500;700',
+  'preview-moirai-one': 'Moirai+One',
+}
+
+const DYNAMIC_FONT_STYLESHEETS: Record<string, string> = {
+  'preview-pretendard': 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css',
+  'preview-suit': 'https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css',
+  'preview-wanted-sans': 'https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/split/WantedSans.min.css',
+  'preview-spoqa': 'https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css',
+  'preview-maru-buri': 'https://cdn.jsdelivr.net/gh/fonts-archive/MaruBuri/MaruBuri.css',
+  'preview-nanum-square': 'https://cdn.jsdelivr.net/gh/hiun/NanumSquare/nanumsquare.css',
+  'preview-gmarket-sans': 'https://cdn.jsdelivr.net/gh/fonts-archive/GmarketSans/GmarketSans.css',
 }
 
 const PURPOSES: Purpose[] = ['자동', '로고', '레이저 각인', '간판', '포스터', 'SNS', '청첩장']
@@ -1193,17 +1354,44 @@ export default function App() {
     .sort()
     .join('|')
 
+  const dynamicStylesheetKey = displayFonts
+    .map(font => DYNAMIC_FONT_STYLESHEETS[font.cssClass])
+    .filter(Boolean)
+    .sort()
+    .join('|')
+
   useEffect(() => {
-    if (!dynamicFontKey) return
+    if (!dynamicFontKey) {
+      document.getElementById('fontpick-google-fonts')?.remove()
+      return
+    }
     const specs = dynamicFontKey.split('|')
-    const id = `fontpick-gf-${specs.join('-').replace(/[^a-z0-9]+/gi, '-').slice(0, 120)}`
-    if (document.getElementById(id)) return
-    const link = document.createElement('link')
+    const id = 'fontpick-google-fonts'
+    const existing = document.getElementById(id) as HTMLLinkElement | null
+    const link = existing ?? document.createElement('link')
     link.id = id
     link.rel = 'stylesheet'
     link.href = `https://fonts.googleapis.com/css2?${specs.map(spec => `family=${spec}`).join('&')}&display=swap`
-    document.head.appendChild(link)
+    if (!existing) document.head.appendChild(link)
   }, [dynamicFontKey])
+
+  useEffect(() => {
+    const activeUrls = dynamicStylesheetKey ? dynamicStylesheetKey.split('|') : []
+    document.querySelectorAll<HTMLLinkElement>('link[data-fontpick-font="external"]').forEach(link => {
+      if (!activeUrls.includes(link.href)) link.remove()
+    })
+    for (const href of activeUrls) {
+      const id = `fontpick-css-${href.replace(/[^a-z0-9]+/gi, '-').slice(-120)}`
+      if (document.getElementById(id)) continue
+      const link = document.createElement('link')
+      link.id = id
+      link.rel = 'stylesheet'
+      link.href = href
+      link.crossOrigin = 'anonymous'
+      link.dataset.fontpickFont = 'external'
+      document.head.appendChild(link)
+    }
+  }, [dynamicStylesheetKey])
 
   const toggleFilter = (f: FilterTag) => {
     setActiveFilters(prev => prev.includes(f) ? prev.filter(x => x !== f) : [...prev, f])

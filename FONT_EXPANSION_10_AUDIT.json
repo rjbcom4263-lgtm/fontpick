@@ -1,0 +1,82 @@
+[
+  {
+    "fontName": "Asta Sans",
+    "status": "APPROVED",
+    "licenseType": "SIL OFL 1.1",
+    "officialLicenseUrl": "https://github.com/google/fonts/blob/main/ofl/astasans/OFL.txt",
+    "webfontSource": "Google Fonts CSS API",
+    "verifiedAt": "2026-09-02"
+  },
+  {
+    "fontName": "Moirai One",
+    "status": "APPROVED",
+    "licenseType": "SIL OFL 1.1",
+    "officialLicenseUrl": "https://github.com/google/fonts/blob/main/ofl/moiraione/OFL.txt",
+    "webfontSource": "Google Fonts CSS API",
+    "verifiedAt": "2026-09-02"
+  },
+  {
+    "fontName": "Pretendard",
+    "status": "APPROVED",
+    "licenseType": "SIL OFL 1.1",
+    "officialLicenseUrl": "https://github.com/orioncactus/pretendard/blob/main/LICENSE",
+    "webfontSource": "Official versioned jsDelivr dynamic-subset CSS",
+    "verifiedAt": "2026-09-02"
+  },
+  {
+    "fontName": "SUIT",
+    "status": "APPROVED",
+    "licenseType": "SIL OFL 1.1",
+    "officialLicenseUrl": "https://github.com/sun-typeface/SUIT/blob/main/LICENSE",
+    "webfontSource": "Official versioned jsDelivr WOFF2 CSS",
+    "verifiedAt": "2026-09-02"
+  },
+  {
+    "fontName": "Wanted Sans",
+    "status": "APPROVED",
+    "licenseType": "SIL OFL 1.1",
+    "officialLicenseUrl": "https://github.com/wanteddev/wanted-sans/blob/main/OFL.txt",
+    "webfontSource": "Official versioned jsDelivr dynamic-subset CSS",
+    "verifiedAt": "2026-09-02"
+  },
+  {
+    "fontName": "Spoqa Han Sans Neo",
+    "status": "APPROVED",
+    "licenseType": "SIL OFL 1.1",
+    "officialLicenseUrl": "https://github.com/spoqa/spoqa-han-sans/blob/main/LICENSE",
+    "webfontSource": "Official Spoqa webfont CSS",
+    "verifiedAt": "2026-09-02"
+  },
+  {
+    "fontName": "Maru Buri",
+    "status": "APPROVED",
+    "licenseType": "NAVER Open Font License",
+    "officialLicenseUrl": "https://hangeul.naver.com/maruproject_11",
+    "webfontSource": "jsDelivr preview mirror; official font files are not offered by FontPick",
+    "verifiedAt": "2026-09-02"
+  },
+  {
+    "fontName": "Nanum Square",
+    "status": "APPROVED",
+    "licenseType": "NAVER Open Font License",
+    "officialLicenseUrl": "https://campaign.naver.com/nanumsquare_neo/",
+    "webfontSource": "jsDelivr preview mirror; official font files are not offered by FontPick",
+    "verifiedAt": "2026-09-02"
+  },
+  {
+    "fontName": "Gmarket Sans",
+    "status": "APPROVED",
+    "licenseType": "SIL OFL 1.1",
+    "officialLicenseUrl": "https://corp.gmarket.com/fonts/",
+    "webfontSource": "jsDelivr preview mirror; official font files are not offered by FontPick",
+    "verifiedAt": "2026-09-02"
+  },
+  {
+    "fontName": "D2Coding",
+    "status": "APPROVED",
+    "licenseType": "SIL OFL 1.1",
+    "officialLicenseUrl": "https://github.com/naver/d2-coding-font/blob/master/OFL.txt",
+    "webfontSource": "NAVER official repository WOFF2",
+    "verifiedAt": "2026-09-02"
+  }
+]

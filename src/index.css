@@ -77,6 +77,40 @@ body {
 .preview-gugi { font-family: "Gugi", sans-serif; }
 .preview-batang { font-family: "Batang", serif; }
 .preview-dotum { font-family: "Dotum", sans-serif; }
+.preview-asta-sans { font-family: "Asta Sans", sans-serif; }
+.preview-moirai-one { font-family: "Moirai One", sans-serif; }
+.preview-pretendard { font-family: "Pretendard", sans-serif; }
+.preview-suit { font-family: "SUIT", sans-serif; }
+.preview-wanted-sans { font-family: "Wanted Sans", sans-serif; }
+.preview-spoqa { font-family: "Spoqa Han Sans Neo", sans-serif; }
+.preview-maru-buri { font-family: "Maru Buri", serif; }
+.preview-nanum-square { font-family: "Nanum Square", sans-serif; }
+.preview-gmarket-sans { font-family: "Gmarket Sans", sans-serif; }
+.preview-d2coding { font-family: "D2Coding", monospace; }
+
+@font-face {
+  font-family: "Batang";
+  src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/batang/Batang-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "D2Coding";
+  src: url("https://raw.githubusercontent.com/naver/d2-coding-font/master/site/fonts/D2Coding-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "D2Coding";
+  src: url("https://raw.githubusercontent.com/naver/d2-coding-font/master/site/fonts/D2Coding-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 .checkerboard {
   background-color: #fff;
