@@ -975,10 +975,116 @@ const SORT_OPTIONS: SortOption[] = ['추천순', '감성순', '가독성순', '�
 const DOWNLOAD_FORMATS: { key: DownloadFormat; label: string; desc: string }[] = [
   { key: 'png', label: 'PNG', desc: '흰 배경 포함 PNG 이미지' },
   { key: 'transparent-png', label: '투명 PNG', desc: '배경 없는 투명 PNG' },
-  { key: 'svg', label: 'SVG', desc: '벡터 SVG 파일' },
-  { key: 'svg-path', label: 'SVG Path', desc: '패스 변환된 SVG (폰트 불필요)' },
+  { key: 'svg', label: 'SVG', desc: '편집 가능한 SVG 텍스트' },
+  { key: 'svg-path', label: '고정형 SVG', desc: '폰트 없이 모양 유지' },
 ]
 const DOWNLOAD_SIZES = ['1920×400', '1200×300', '800×200', '400×100', '커스텀']
+
+const DOWNLOAD_DIMENSIONS: Record<string, [number, number]> = {
+  '1920×400': [1920, 400],
+  '1200×300': [1200, 300],
+  '800×200': [800, 200],
+  '400×100': [400, 100],
+  '커스텀': [1920, 400],
+}
+
+const escapeXml = (value: string) => value
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&apos;')
+
+const safeFileName = (value: string) => value
+  .trim()
+  .replace(/[\\/:*?"<>|]+/g, '-')
+  .replace(/\s+/g, '-')
+  .slice(0, 60) || 'fontpick'
+
+const resolveFontFamily = (cssClass: string) => {
+  const probe = document.createElement('span')
+  probe.className = cssClass
+  probe.textContent = '가A'
+  probe.style.position = 'fixed'
+  probe.style.left = '-9999px'
+  document.body.appendChild(probe)
+  const family = getComputedStyle(probe).fontFamily
+  probe.remove()
+  return family || 'sans-serif'
+}
+
+const renderTextCanvas = async (
+  text: string,
+  font: FontData,
+  width: number,
+  height: number,
+  transparent: boolean,
+) => {
+  const family = resolveFontFamily(font.cssClass)
+  await document.fonts.load(`${font.weight} 64px ${family}`, text)
+  await document.fonts.ready
+
+  const canvas = document.createElement('canvas')
+  canvas.width = width
+  canvas.height = height
+  const context = canvas.getContext('2d')
+  if (!context) throw new Error('이 브라우저에서는 이미지 캔버스를 만들 수 없습니다.')
+
+  if (!transparent) {
+    context.fillStyle = '#ffffff'
+    context.fillRect(0, 0, width, height)
+  }
+
+  let size = Math.max(20, Math.floor(height * 0.46))
+  context.font = `${font.weight} ${size}px ${family}`
+  const maxWidth = width * 0.88
+  const measured = context.measureText(text).width
+  if (measured > maxWidth) {
+    size = Math.max(12, Math.floor(size * (maxWidth / measured)))
+    context.font = `${font.weight} ${size}px ${family}`
+  }
+  context.fillStyle = '#0f172a'
+  context.textAlign = 'center'
+  context.textBaseline = 'middle'
+  context.fillText(text, width / 2, height / 2, maxWidth)
+  return { canvas, family, size }
+}
+
+const exportFontArtwork = async (
+  text: string,
+  font: FontData,
+  format: DownloadFormat,
+  sizeLabel: string,
+) => {
+  const [width, height] = DOWNLOAD_DIMENSIONS[sizeLabel] ?? DOWNLOAD_DIMENSIONS['1920×400']
+  const baseName = `${safeFileName(text)}-${safeFileName(font.name)}-${width}x${height}`
+
+  if (format === 'png' || format === 'transparent-png') {
+    const { canvas } = await renderTextCanvas(text, font, width, height, format === 'transparent-png')
+    const blob = await new Promise<Blob | null>(resolve => canvas.toBlob(resolve, 'image/png'))
+    if (!blob) throw new Error('PNG 파일 생성에 실패했습니다.')
+    return { blob, fileName: `${baseName}.png` }
+  }
+
+  if (format === 'svg-path') {
+    const { canvas } = await renderTextCanvas(text, font, width, height, true)
+    const dataUrl = canvas.toDataURL('image/png')
+    const fixedSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><title>${escapeXml(text)} · ${escapeXml(font.name)}</title><image href="${dataUrl}" width="${width}" height="${height}"/></svg>`
+    return {
+      blob: new Blob([fixedSvg], { type: 'image/svg+xml;charset=utf-8' }),
+      fileName: `${baseName}-fixed.svg`,
+    }
+  }
+
+  const family = resolveFontFamily(font.cssClass)
+  await document.fonts.load(`${font.weight} 64px ${family}`, text)
+  const fontSize = Math.max(20, Math.floor(height * 0.46))
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><title>${escapeXml(text)} · ${escapeXml(font.name)}</title><rect width="100%" height="100%" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#0f172a" font-family="${escapeXml(family)}" font-size="${fontSize}" font-weight="${escapeXml(font.weight)}">${escapeXml(text)}</text></svg>`
+  return {
+    blob: new Blob([svg], { type: 'image/svg+xml;charset=utf-8' }),
+    fileName: `${baseName}.svg`,
+  }
+}
 
 const MOOD_LABELS: Record<MoodKey, string> = {
   warm: '따뜻함', emotional: '감성', cute: '귀여움', formal: '정중함', strong: '강렬함',
@@ -1339,7 +1445,7 @@ interface FontCardProps {
   onLike: () => void
   onSelect: () => void
   onCompare: () => void
-  onDownload: () => void
+  onDownload: (format: DownloadFormat) => void
 }
 
 const FontCard = ({ font, previewText, liked, selected, onLike, onSelect, onCompare, onDownload }: FontCardProps) => (
@@ -1379,13 +1485,13 @@ const FontCard = ({ font, previewText, liked, selected, onLike, onSelect, onComp
       </div>
       <div className="flex items-center gap-1.5 pt-1">
         <button
-          onClick={onDownload}
+          onClick={() => onDownload('png')}
           className="flex-1 py-2 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-base"
         >
           PNG
         </button>
         <button
-          onClick={onDownload}
+          onClick={() => onDownload('svg')}
           className="flex-1 py-2 text-xs font-semibold border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-base"
         >
           SVG
@@ -1442,6 +1548,10 @@ export default function App() {
   const [downloadFormat, setDownloadFormat] = useState<DownloadFormat>('png')
   const [downloadSize, setDownloadSize] = useState('1920×400')
   const [downloadDone, setDownloadDone] = useState(false)
+  const [downloadBusy, setDownloadBusy] = useState(false)
+  const [downloadError, setDownloadError] = useState('')
+  const [downloadUrl, setDownloadUrl] = useState('')
+  const [downloadFileName, setDownloadFileName] = useState('')
 
   const previewText = inputText.trim() || '가나다라마바사'
   const analysis = analyzeText(previewText)
@@ -1455,15 +1565,21 @@ export default function App() {
   ).slice(0, 8)
 
 
-  const dynamicFontKey = displayFonts
+  const fontsNeededForCurrentScreen = [
+    ...displayFonts,
+    ...(downloadFont ? [downloadFont] : []),
+    ...(compareFont ? [compareFont] : []),
+  ]
+
+  const dynamicFontKey = [...new Set(fontsNeededForCurrentScreen
     .map(font => DYNAMIC_GOOGLE_FONT_SPECS[font.cssClass])
-    .filter(Boolean)
+    .filter(Boolean))]
     .sort()
     .join('|')
 
-  const dynamicStylesheetKey = displayFonts
+  const dynamicStylesheetKey = [...new Set(fontsNeededForCurrentScreen
     .map(font => DYNAMIC_FONT_STYLESHEETS[font.cssClass])
-    .filter(Boolean)
+    .filter(Boolean))]
     .sort()
     .join('|')
 
@@ -1500,6 +1616,10 @@ export default function App() {
     }
   }, [dynamicStylesheetKey])
 
+  useEffect(() => () => {
+    if (downloadUrl) URL.revokeObjectURL(downloadUrl)
+  }, [downloadUrl])
+
   const toggleFilter = (f: FilterTag) => {
     setActiveFilters(prev => prev.includes(f) ? prev.filter(x => x !== f) : [...prev, f])
   }
@@ -1523,10 +1643,38 @@ export default function App() {
     setCompareFont(font)
     setScreen('compare')
   }
-  const goDownload = (font: FontData) => {
+  const goDownload = (font: FontData, format: DownloadFormat = 'png') => {
+    if (downloadUrl) URL.revokeObjectURL(downloadUrl)
     setDownloadFont(font)
+    setDownloadFormat(format)
     setDownloadDone(false)
+    setDownloadError('')
+    setDownloadUrl('')
+    setDownloadFileName('')
     setScreen('download')
+  }
+
+  const handleFileDownload = async (font: FontData) => {
+    setDownloadBusy(true)
+    setDownloadError('')
+    try {
+      const file = await exportFontArtwork(previewText, font, downloadFormat, downloadSize)
+      if (downloadUrl) URL.revokeObjectURL(downloadUrl)
+      const url = URL.createObjectURL(file.blob)
+      setDownloadUrl(url)
+      setDownloadFileName(file.fileName)
+      const anchor = document.createElement('a')
+      anchor.href = url
+      anchor.download = file.fileName
+      document.body.appendChild(anchor)
+      anchor.click()
+      anchor.remove()
+      setDownloadDone(true)
+    } catch (error) {
+      setDownloadError(error instanceof Error ? error.message : '파일 생성 중 오류가 발생했습니다.')
+    } finally {
+      setDownloadBusy(false)
+    }
   }
 
   const Header = ({ minimal = false }: { minimal?: boolean }) => (
@@ -1819,7 +1967,7 @@ export default function App() {
                   onLike={() => toggleLike(font.id)}
                   onSelect={() => toggleSelect(font.id)}
                   onCompare={() => goCompare(font)}
-                  onDownload={() => goDownload(font)}
+                  onDownload={format => goDownload(font, format)}
                 />
               ))}
             </div>
@@ -2027,11 +2175,17 @@ export default function App() {
 
                 {/* CTA */}
                 <button
-                  onClick={() => setDownloadDone(true)}
-                  className="w-full py-3.5 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-base text-sm"
+                  onClick={() => handleFileDownload(font)}
+                  disabled={downloadBusy}
+                  className="w-full py-3.5 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 disabled:bg-slate-400 disabled:cursor-wait transition-base text-sm"
                 >
-                  {font.name} · {downloadFormat.toUpperCase()} · {downloadSize} 다운로드
+                  {downloadBusy ? '파일 만드는 중…' : `${font.name} · ${downloadFormat.toUpperCase()} · ${downloadSize} 다운로드`}
                 </button>
+                {downloadError && (
+                  <p role="alert" className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
+                    {downloadError}
+                  </p>
+                )}
               </div>
             </div>
           ) : (
@@ -2046,7 +2200,7 @@ export default function App() {
               <p className="text-slate-500 text-sm mb-1">
                 <strong>{font.name}</strong> · {downloadFormat.toUpperCase()} · {downloadSize}
               </p>
-              <p className="text-xs text-slate-400 mb-7">파일이 기기에 저장되었습니다</p>
+              <p className="text-xs text-slate-400 mb-7">자동 저장이 시작되지 않으면 아래의 ‘파일 저장’ 버튼을 눌러주세요</p>
 
               <div className="bg-green-50 border border-green-100 rounded-xl p-4 text-left mb-6">
                 <p className="text-sm font-semibold text-green-900 mb-1.5">사용 가이드</p>
@@ -2057,13 +2211,22 @@ export default function App() {
                 </ul>
               </div>
 
-              <div className="flex gap-2.5">
+              <div className="flex flex-col sm:flex-row gap-2.5">
                 <button
-                  onClick={() => setDownloadDone(false)}
+                  onClick={() => { setDownloadDone(false); setDownloadError('') }}
                   className="flex-1 py-2.5 border border-slate-200 text-slate-700 text-sm font-medium rounded-xl hover:bg-slate-50 transition-base"
                 >
                   다른 포맷으로 다운로드
                 </button>
+                {downloadUrl && (
+                  <a
+                    href={downloadUrl}
+                    download={downloadFileName}
+                    className="flex-1 py-2.5 bg-blue-600 text-white text-sm font-semibold text-center rounded-xl hover:bg-blue-700 transition-base"
+                  >
+                    파일 저장
+                  </a>
+                )}
                 <button
                   onClick={() => setScreen('results')}
                   className="flex-1 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-slate-800 transition-base"
